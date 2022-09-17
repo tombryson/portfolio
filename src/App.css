@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
 body {
-  background-color: #E3E9E9;
+  background-color: #f4f6f6;
 }
 
 .top-background {
@@ -10,9 +12,14 @@ body {
   background-size: cover;
 }
 
+.your-name {
+  text-align: center;
+}
+
 .waterfalls {
   background: url(./images/top-background-light.gif) center no-repeat;
   background: url(./images/top-background-dark.gif) hidden no-repeat;
+  background-position: left;
 }
 
 #top-background-light {
@@ -40,7 +47,7 @@ body {
 
 .background-overlay:before {
   content: '';
-  background-color: rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(#ffffff00, #f4f4f400, #f4f6f6);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -65,14 +72,14 @@ body {
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
-  width: min(350px, 75vw);
+  width: min(400px, 75vw);
   transition: all 0.10s ease;
   border-radius: 5px;
   background-color: #ffffff5e;
-  height: 12vh;
-  padding-top: 6vh;
+  height: 4rem;
+  padding-top: 2rem;
 }
 
-h1:hover ~ .background-overlay {
+h1:hover {
   background-color: rgba(255, 255, 255, 0);
 }
