@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import react from 'react'
 import './App.css';
+import TopBackgroundLight from './images/top-background-light.gif'
+import TopBackgroundDark from './images/top-background-dark.gif'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faMoon } from '@fortawesome/free-solid-svg-icons'
+
+
+const icon = <FontAwesomeIcon icon={faMoon} />
+// const element = <FontAwesomeIcon icon={faCoffee} />
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+      {icon}
+      <div className="waterfalls background-overlay">
+        <div className='content-top'>
+          <h1>Welcome</h1>
+          <div className='darkMode'>
+          {icon}
+          </div>
+        </div>
+      </div>
     </div>
+    </>
   );
 }
 
