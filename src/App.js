@@ -16,12 +16,12 @@ function App() {
     <div>
       <div className="waterfalls background-overlay">
         <div className='content-top'>
-          <h1>Welcome</h1>
-          <div className='darkMode'>
+            <h1> </h1>
+            <div className='darkMode'>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     <div><h1 className='your-name'>Tom Bryson</h1></div>
     </>
   );
