@@ -1,5 +1,9 @@
 import { useEffect, Helmet } from 'react'
 import './App.css';
+import Tapedeck from './Tapedeck.js';
+import Tictactoe from './Tictactoe.js';
+import Braintrain from './Braintrain.js';
+import Burning from './Burning.js';
 import TopBackgroundLight from '../images/top-background-light.gif'
 import TopBackgroundDark from '../images/top-background-dark.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,21 +30,17 @@ function App() {
     <h1>Welcome</h1>
     <p>My name is Tom Bryson, a Full-stack developer based in Melbuorne</p>
   
-         <div id="burning-airlines" style={{height: 500}}>
-          <h1>Burning Airlines</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+        <div id="burning-airlines" style={{height: 1000}}>
+        <Burning />
         </div>
-        <div id="brain-train" style={{height: 500}}>
-        <h1>Brain Train</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+        <div id="brain-train" style={{height: 1000}}>
+        <Braintrain />
         </div>
-        <div id="tapedeck" style={{height: 500}}>
-        <h1>Tapedeck</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+        <div id="tapedeck" style={{height: 1000}}>
+        <Tapedeck />
         </div>
-        <div id="tic-tac-toe" style={{height: 500}}>
-        <h1>Tic Tac Toe</h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.
+        <div id="tic-tac-toe" style={{height: 1000}}>
+        <Tictactoe />
         </div>
     </>
   );

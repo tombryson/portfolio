@@ -2,7 +2,7 @@
 @import '~mdb-ui-kit/css/mdb.min.css';
 
 body {
-  background-color: #f4f6f6;
+  background-color: #f9fcff;
 }
 
 .top-background {
@@ -48,7 +48,7 @@ body {
 
 .background-overlay:before {
   content: '';
-  background-image: linear-gradient(#ffffff00, #f4f4f400, #f4f6f6);
+  background-image: linear-gradient(#ffffff00, #f4f4f400, #f9fcff);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -102,4 +102,45 @@ nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
   display: flex;
   align-content: space-around;
   align-items: center;
+}
+
+.project-container {
+  display: initial;
+  margin-top: 10%;
+}
+
+.project-underlay {
+  height: 45vh;
+  width: 79vw;
+  border: solid black 4px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  padding: 1%;
+  margin: 8%;
+  position: absolute;
+}
+
+.project-overlay {
+  height: 45vh;
+  min-height: 240px;
+  min-width: 300px;
+  width: 42vw;
+  border: solid black 4px;
+  border-radius: 10px;
+  background-color: pink;
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  padding: 1%;  
+  margin: 8%;
+  justify-content: center;
+  position: absolute;
+}
+
+.burning-airlines {
+  /* background-color: green; */
+  background-image: URL('https://wallpapercave.com/wp/wp4080178.jpg');
+}
+
+div#burning-airlines {
+  background-color: #f9fcff;
 }
