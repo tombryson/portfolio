@@ -1,4 +1,4 @@
-import { useEffect, Helmet } from 'react'
+import { useState, useEffect, Helmet } from 'react'
 import './App.css';
 import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
@@ -15,21 +15,67 @@ const icon = <FontAwesomeIcon icon={faMoon} />
 // const element = <FontAwesomeIcon icon={faCoffee} />
 
 function App() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+const navbarTheme = () => {
+  if (scrollPosition > 1100) {
+    const elements = document.querySelectorAll("a");
+    elements.forEach((link) => {
+      link.style.color = 'black';
+    }
+    );
+  } else {
+    const elements = document.querySelectorAll("a");
+    elements.forEach((link, idx) => {
+      if (idx <= 3) {
+      link.style.color = 'hsla(0,0%,100%,.55)';
+      }
+      if (idx === 1) {
+        link.style.color = 'white';
+      }
+    }
+    )
+  }
+}
+navbarTheme();
+
+
+
   return (
     <>
     <div>
       <div className="waterfalls background-overlay" id="home">
         <div className='content-top'>
-            <h1> </h1>
+            <h1>
+              <div className='name'>TOM BRYSON FULL STACK DEVELOPER
+              </div> 
+            </h1>
             <div className='darkMode'>
             </div>
           </div>
         </div>
       </div>
-    <div></div>
+    <div className='hello'>
     <h1>Welcome</h1>
-    <p>My name is Tom Bryson, a Full-stack developer based in Melbuorne</p>
-  
+    <p>My name is Tom Bryson, a Full-stack developer based in Melbourne</p>
+    <div>
+      <h2> Projects </h2>
+    </div>
+      </div>
+      <div className='projects'>
         <div id="burning-airlines" style={{height: 1000}}>
         <Burning />
         </div>
@@ -42,6 +88,11 @@ function App() {
         <div id="tic-tac-toe" style={{height: 1000}}>
         <Tictactoe />
         </div>
+
+      </div>
+      <div className='skills'>
+        <h1>Skills:</h1>
+      </div>
     </>
   );
 }

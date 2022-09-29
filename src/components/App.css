@@ -2,7 +2,7 @@
 @import '~mdb-ui-kit/css/mdb.min.css';
 
 body {
-  background-color: #f9fcff;
+  background-color: #f9fcff!important;
 }
 
 .top-background {
@@ -15,6 +15,26 @@ body {
 
 .your-name {
   text-align: center;
+}
+
+.name {
+  opacity: 0;
+  transition: all 0.6s ease!important;
+  border: solid black;
+  background-image: repeating-linear-gradient(45deg, #ffffffa8, transparent 4px);
+  display: inline;
+}
+
+h1:hover > .name {
+   animation: fadeIn 5s;
+   animation-fill-mode: forwards;
+   right: 5vw;
+   position: relative;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .waterfalls {
@@ -55,6 +75,7 @@ body {
   top: 0;
   left: 0;
   z-index: 0;
+  transition: all 0.6s ease!important;
 }
 
 .background-pattern {
@@ -69,27 +90,39 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
+  transition: all 0.6s ease!important;
+}
+
+.hello {
+  text-align: center;
+  background-color: #f9fcff!important;
+  background-image: linear-gradient(#f9fcff, #b5ceec);
 }
 
 .content-top h1 {
-  padding: 6vh 15px 15px;
   font-size: 40px;
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
-  width: 400px;
+  width: 10%;
+  border: solid rgba(0, 0, 0, 0.244);
   transition: all 2.0s cubic-bezier(0.25, 0.17, 0.3, 0.73);
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #ffffff80;
   background-image: radial-gradient(white, #ffffff00);
-  height: 15rem;
-  padding-top: 8rem;
-  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  /* height: 15rem; */
+  /* padding-top: 8rem; */
+  /* clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%); */
 }
 
 h1:hover {
-  background-color: rgba(255, 255, 255, 0);
-  background-image: none;
+  background-color: rgb(255 255 255 / 0%);
+  background-image: radial-gradient(#ffffff61, transparent);
+  padding: 6vh 12rem 4rem;
+  border: #ffffff00;
+  color: black;
+  border-radius: 25%;
+  margin-bottom: 10vh;
 }
 
 nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
@@ -102,6 +135,27 @@ nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
   display: flex;
   align-content: space-around;
   align-items: center;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  transition: color 0.6s ease!important;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #e9ecef!important;
+  --bs-dropdown-link-active-color: rgb(0, 0, 0)!important;
+}
+
+.dropdown-menu .active {
+  color: #16181b!important;
+  text-decoration: none;
+  background: none!important;
+  font-weight: bold!important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+  font-weight: bold!important;
 }
 
 .project-container {
@@ -120,6 +174,10 @@ nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
   position: absolute;
 }
 
+.hello h2 {
+  margin: 0 auto!important;
+}
+
 .project-overlay {
   height: 45vh;
   min-height: 240px;
@@ -128,7 +186,6 @@ nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
   border: solid black 4px;
   border-radius: 10px;
   background-color: pink;
-  z-index: 10;
   color: rgb(0, 0, 0);
   padding: 1%;  
   margin: 8%;
@@ -142,5 +199,5 @@ nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
 }
 
 div#burning-airlines {
-  background-color: #f9fcff;
+  background-color: #b5ceec;
 }
