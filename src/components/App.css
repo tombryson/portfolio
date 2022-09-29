@@ -26,10 +26,10 @@ body {
 }
 
 h1:hover > .name {
-   animation: fadeIn 5s;
-   animation-fill-mode: forwards;
-   right: 5vw;
-   position: relative;
+  animation: fadeIn 4s;
+  animation-fill-mode: forwards;
+  right: 6vw;
+  position: relative;
 }
 
 @keyframes fadeIn {
@@ -96,7 +96,30 @@ h1:hover > .name {
 .hello {
   text-align: center;
   background-color: #f9fcff!important;
-  background-image: linear-gradient(#f9fcff, #b5ceec);
+  background-image: linear-gradient(#f9fcff, #d2e7f8);
+}
+
+span {
+  color: #f35626;
+  background-image: -webkit-linear-gradient(90deg,#f35626,#ffab39bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+  animation-timing-function: steps(5, end);
+  position: absolute;
+  top: 60%;
+  right: 1%;
+  font-weight: 600;
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
 }
 
 .content-top h1 {
@@ -105,14 +128,10 @@ h1:hover > .name {
   margin: 0 auto;
   text-transform: uppercase;
   width: 10%;
-  border: solid rgba(0, 0, 0, 0.244);
   transition: all 2.0s cubic-bezier(0.25, 0.17, 0.3, 0.73);
   border-radius: 6px;
   background-color: #ffffff80;
   background-image: radial-gradient(white, #ffffff00);
-  /* height: 15rem; */
-  /* padding-top: 8rem; */
-  /* clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%); */
 }
 
 h1:hover {
@@ -199,5 +218,5 @@ a {
 }
 
 div#burning-airlines {
-  background-color: #b5ceec;
+  background-color: #d3e8f8;
 }

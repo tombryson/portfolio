@@ -1,4 +1,4 @@
-import { useState, useEffect, Helmet } from 'react'
+import { useState, useEffect, } from 'react'
 import './App.css';
 import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
@@ -60,7 +60,7 @@ navbarTheme();
       <div className="waterfalls background-overlay" id="home">
         <div className='content-top'>
             <h1>
-              <div className='name'>TOM BRYSON FULL STACK DEVELOPER
+              <div className='name'>TOM BRYSON FULL STACK <span className='web'>WEB</span> DEVELOPER
               </div> 
             </h1>
             <div className='darkMode'>
