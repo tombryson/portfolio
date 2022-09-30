@@ -107,7 +107,7 @@ span {
   -webkit-animation: hue 10s infinite linear;
   animation-timing-function: steps(5, end);
   position: absolute;
-  top: 60%;
+  top: 13.5vh;
   right: 1%;
   font-weight: 600;
 }
