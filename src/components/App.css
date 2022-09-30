@@ -107,8 +107,8 @@ span {
   -webkit-animation: hue 10s infinite linear;
   animation-timing-function: steps(5, end);
   position: absolute;
-  top: 13.5vh;
-  right: 1%;
+  top: 145px;
+  right: 0px;
   font-weight: 600;
 }
 
@@ -122,7 +122,7 @@ span {
   }
 }
 
-.content-top h1 {
+.content-top .top {
   font-size: 40px;
   text-align: center;
   margin: 0 auto;
@@ -134,7 +134,7 @@ span {
   background-image: radial-gradient(white, #ffffff00);
 }
 
-h1:hover {
+.top:hover {
   background-color: rgb(255 255 255 / 0%);
   background-image: radial-gradient(#ffffff61, transparent);
   padding: 6vh 12rem 4rem;
@@ -218,5 +218,17 @@ a {
 }
 
 div#burning-airlines {
-  background-color: #d3e8f8;
+  background-image: linear-gradient(0deg, #ffb6d88c, #d3e8f8, #d3e8f8);
+}
+
+div#brain-train {
+  background-image: linear-gradient(0deg, transparent, #ffb6d88c);
+}
+
+div#tapedeck {
+  background-image: linear-gradient(transparent, green);
+}
+
+div#tic-tac-toe {
+  background-image: linear-gradient(transparent, #ccc);
 }

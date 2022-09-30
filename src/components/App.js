@@ -29,27 +29,43 @@ function App() {
     };
   }, []);
 
+const navDark = () => {
+  const elements = document.querySelectorAll("a");
+  elements.forEach((link) => {
+    link.style.color = 'black';
+  }
+  );
+};
+
+const navLight = () => {
+  const elements = document.querySelectorAll("a");
+  elements.forEach((link, idx) => {
+    if (idx <= 3) {
+    link.style.color = 'hsla(0,0%,100%,.55)';
+    }
+    if (idx === 1) {
+      link.style.color = 'white';
+    }
+  }
+  );
+};
 
 const navbarTheme = () => {
-  if (scrollPosition > 1100) {
-    const elements = document.querySelectorAll("a");
-    elements.forEach((link) => {
-      link.style.color = 'black';
+  if (window.innerWidth < 1000) {
+    if (scrollPosition > 420) {
+      navDark();
+    } else {
+      navLight();
     }
-    );
   } else {
-    const elements = document.querySelectorAll("a");
-    elements.forEach((link, idx) => {
-      if (idx <= 3) {
-      link.style.color = 'hsla(0,0%,100%,.55)';
-      }
-      if (idx === 1) {
-        link.style.color = 'white';
-      }
+    if (scrollPosition > 900) {
+      navDark();
+    } else {
+      navLight();
     }
-    )
   }
 }
+  
 navbarTheme();
 
 
@@ -59,7 +75,7 @@ navbarTheme();
     <div>
       <div className="waterfalls background-overlay" id="home">
         <div className='content-top'>
-            <h1>
+            <h1 className='top'>
               <div className='name'>TOM BRYSON FULL STACK <span className='web'>WEB</span> DEVELOPER
               </div> 
             </h1>
@@ -76,16 +92,16 @@ navbarTheme();
     </div>
       </div>
       <div className='projects'>
-        <div id="burning-airlines" style={{height: 1000}}>
+        <div id="burning-airlines" style={{height: '80vh'}}>
         <Burning />
         </div>
-        <div id="brain-train" style={{height: 1000}}>
+        <div id="brain-train" style={{height: '80vh'}}>
         <Braintrain />
         </div>
-        <div id="tapedeck" style={{height: 1000}}>
+        <div id="tapedeck" style={{height: '80vh'}}>
         <Tapedeck />
         </div>
-        <div id="tic-tac-toe" style={{height: 1000}}>
+        <div id="tic-tac-toe" style={{height: '80vh'}}>
         <Tictactoe />
         </div>
 
