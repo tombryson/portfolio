@@ -2,7 +2,7 @@ import Box from './Box.js'
 
 const Tictactoe = () => {
     return (
-        <Box projectClass={'tapedeck'} project={'Tapedeck'}>
+        <Box projectClass={'tapedeck-card'} project={'Tapedeck'}>
             <h1>
             Tapedeck
             </h1>

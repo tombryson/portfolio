@@ -2,7 +2,7 @@ import Box from './Box.js'
 
 const Tictactoe = () => {
     return (
-        <Box projectClass={'tictactoe'} project={'Tic-Tac-Toe'}>
+        <Box projectClass={'tictactoe-card'} project={'Tic-Tac-Toe'}>
             <h1>
             Tick Tac Toe
             </h1>

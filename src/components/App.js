@@ -8,7 +8,7 @@ import TopBackgroundLight from '../images/top-background-light.gif'
 import TopBackgroundDark from '../images/top-background-dark.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
-import { faCoffee, faMoon } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faMoon, faVrCardboard } from '@fortawesome/free-solid-svg-icons'
 
 
 const icon = <FontAwesomeIcon icon={faMoon} />
@@ -23,22 +23,22 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-const navDark = () => {
-  const elements = document.querySelectorAll("a");
+const navDark = (elements, navbar) => {
+  console.log(navbar)
+  navbar.setAttribute("id","navbar-visible");
   elements.forEach((link) => {
-    link.style.color = 'black';
+  link.style.color = 'black';
   }
   );
 };
 
-const navLight = () => {
-  const elements = document.querySelectorAll("a");
+const navLight = (elements, navbar) => {
+  navbar.removeAttribute("id", "navbar-visible");
   elements.forEach((link, idx) => {
     if (idx <= 3) {
     link.style.color = 'hsla(0,0%,100%,.55)';
@@ -50,24 +50,36 @@ const navLight = () => {
   );
 };
 
+
+
+const IH = window.innerHeight;
+const IW = window.innerWidth;
 const navbarTheme = () => {
-  if (window.innerWidth < 1000) {
-    if (scrollPosition > 420) {
-      navDark();
+  const elements = document.querySelectorAll("a");
+  const navbar = document.getElementsByTagName("nav")[0]
+  if (IH < 1000 && IW > 350) {
+    if (scrollPosition/IH > 0.70) {
+      navDark(elements, navbar);
     } else {
-      navLight();
+      navLight(elements, navbar);
+    }
+  } else if (IW < 350) {
+    if (scrollPosition/IH > 0.38) {
+      navDark(elements, navbar);
+    } else {
+      navLight(elements, navbar);
     }
   } else {
-    if (scrollPosition > 900) {
-      navDark();
-    } else {
-      navLight();
+    if (scrollPosition/IH > 0.70) {
+      navDark(elements, navbar);
+      } else {
+      navLight(elements, navbar);
+      }
     }
-  }
 }
-  
-navbarTheme();
-
+useEffect(() => {
+  navbarTheme();
+}, [scrollPosition]);
 
 
   return (
@@ -75,8 +87,8 @@ navbarTheme();
     <div>
       <div className="waterfalls background-overlay" id="home">
         <div className='content-top'>
-            <h1 className='top'>
-              <div className='name'>TOM BRYSON FULL STACK <span className='web'>WEB</span> DEVELOPER
+            <h1 id='top'>
+              <div className='name'>TOM BRYSON: FULL STACK<span className='web'>WEB</span><br></br>DEVELOPER
               </div> 
             </h1>
             <div className='darkMode'>
@@ -85,30 +97,39 @@ navbarTheme();
         </div>
       </div>
     <div className='hello'>
-    <h1>Welcome</h1>
-    <p>My name is Tom Bryson, a Full-stack developer based in Melbourne</p>
-    <div>
-      <h2> Projects </h2>
+      <div class="container">
+        <div class="row">
+        <div class="col align-self-start">
+        <h1 className='welcome'>Welcome</h1>
+        </div>
+        <div class="col align-self-center">
+          <p className='my-name'>My name is Tom Bryson, a Full-stack developer based in Melbourne</p>
+        </div>
+        <div class="col align-self-end">
+          <h2 className='my-projects'> Here are some of my Projects </h2>
+        </div>
+       </div>
     </div>
-      </div>
+    <div>
+    </div>
+    </div>
       <div className='projects'>
-        <div id="burning-airlines" style={{height: '80vh'}}>
+        <div className='burning-airlines project'>
         <Burning />
         </div>
-        <div id="brain-train" style={{height: '80vh'}}>
+        <div className='brain-train project'>
         <Braintrain />
         </div>
-        <div id="tapedeck" style={{height: '80vh'}}>
+        <div className='tapedeck project'>
         <Tapedeck />
         </div>
-        <div id="tic-tac-toe" style={{height: '80vh'}}>
+        <div className='tic-tac-toe project'>
         <Tictactoe />
         </div>
-
       </div>
-      <div className='skills'>
-        <h1>Skills:</h1>
-      </div>
+        <div className='skills'>
+          <h1>Skills:</h1>
+        </div>
     </>
   );
 }

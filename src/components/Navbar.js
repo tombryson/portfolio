@@ -60,6 +60,11 @@ export default function App() {
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBBtn outline rounded className='mx-2' color='light' floating tag='a'>
+              <MDBIcon fas icon="sun" />
+              </MDBBtn>
+            </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBContainer>
