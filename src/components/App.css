@@ -2,6 +2,11 @@
 @import '~mdb-ui-kit/css/mdb.min.css';
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+@font-face {
+  font-family: "leaguespartan-bold";
+  src: url("../../public/leaguespartan-bold-webfont.woff2");
+}
+
 body {
   background-color: #f9fcff!important;
 }
@@ -41,13 +46,18 @@ h1:hover > .name {
 .waterfalls {
   background: url(../images/top-background-light.gif) center no-repeat;
   background-position: left;
+  background: url(../images/top-background-dark.gif) hidden center;
+  transition: 2s all;
 }
 
-.waterfalls:focus {
-    background: url(http://localhost:3000/static/media/top-background-dark.ad3ef0a….gif) center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.background-dark {
+  background: url(../images/top-background-dark.gif) center;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 2s ease;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
 }
 
 #top-background-light {
@@ -103,7 +113,13 @@ h1:hover > .name {
 .hello {
   background-color: #f9fcff!important;
   background-image: linear-gradient(#f9fcff, #d2e7f8);
-  height: 80vh;
+  height: 70em;
+}
+
+@media screen and (min-width: 1400px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 60vw!important;
+  }
 }
 
 span {
@@ -136,18 +152,23 @@ span {
   width: 10%;
   box-shadow: 8vw 14vw 2vw 0.5vw #0b0b0b4d;
   transition: all 2.0s cubic-bezier(0.25, 0.17, 0.3, 0.73);
-  border-radius: 6px;
+  border-radius: 26% 74% 33% 85% / 74% 19% 81% 26%;
+  border: #000000b5 2px solid;
   background-color: #ffffff80;
+  border-style: dashed;
   background-image: radial-gradient(white, #ffffff00);
 }
 
 #top:hover {
   background-color: rgb(255 255 255 / 0%);
-  background-image: radial-gradient(#ffffff61, transparent);
-  padding: 3em 4em 4% 9%;
-  border: #ffffff00;
+  background-image: radial-gradient(#ffffff, transparent);
+  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #00ffbd, inset -20px 0 80px #9200ff, inset 20px 0 300px #aed5ff, inset -20px 0 300px #ffffffe3, 0 0 50px #ffffffde, -9px 2px 80px #ffffffba, 10px 0 80px #0087ffb0;
+  padding: 2em 4em 4% 9%;
+  border: #000000d1 2px solid;
   color: black;
-  border-radius: 20% 5% 5% 5%;
+  border-style: dashed;
+  width: 13%;
+  border-radius: 36% 58% 30% 80% / 49% 66% 28% 37%;
   margin-bottom: 10vh;
 }
 
@@ -201,17 +222,56 @@ li.nav-item {
   font-weight: bold!important;
 }
 
+/* .navbar-expand-lg {
+  flex-wrap: nowrap!important;
+  justify-content: flex-start!important;
+} */
+
 .btn-floating, [class*=btn-outline-].btn-floating {
   padding: 1px;
 }
 
 #navbar-visible {
   background-color: #d2e7f7!important;
-  transition: 1.2s all;
+  transition: 2.2s ease-in-out;
 }
 
 .bg-transparent {
   transition: 0.8s ease-in-out;
+}
+
+.welcome {
+  margin-top: 1rem;
+  font-size: clamp(58px, 4vw, 4vw);
+  height: 14vh;
+  padding: 0 40px 0px 0;
+  width: fit-content;
+  border: solid;
+  border-radius: 30% 70% 34% 66% / 30% 48% 52% 70%;
+}
+
+.container {
+  margin-top: 15rem;
+}
+
+.spartan {
+  font-family: "leaguespartan-bold", "leaguespartan-bold", serif;
+}
+
+.my-name {
+  font-size: min(28px, 4vw);
+  width: 20vw;
+  text-align: left;
+  display: inline-block;
+  margin-left: 0vw;
+}
+
+.text-box {
+  margin-bottom: 8rem;
+}
+
+.arrow {
+  width: clamp(34%, 25rem, 420px);
 }
 
 .project-container {
@@ -219,9 +279,25 @@ li.nav-item {
   height: 80vh;
 }
 
+.box-1 {
+  display: inline-block;
+}
+
+.box-2 {
+  margin-top: 4vh;
+  text-align: center;
+}
+
+.box-3 {
+  text-align: right;
+  margin-left: 2vw;
+  padding-top: 2vh;
+}
+
 .project-underlay {
   height: 45vh;
-  width: 79vw;
+  width: 80vw;
+  min-height: 240px;
   border: solid black 4px;
   border-radius: 10px;
   background-color: rgb(0, 0, 0);
@@ -230,8 +306,23 @@ li.nav-item {
   position: absolute;
 }
 
-.hello h2 {
-  margin: 0 auto!important;
+@media screen and (max-width: 992px) {
+  .project-underlay {
+    min-width: 300px;
+    width: 42vw;
+    height: 90vh;
+    min-height: 240px;
+  }
+  .project-container {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (min-width: 1400px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1510px!important;
+  }
 }
 
 .project-overlay {
@@ -260,6 +351,7 @@ li.nav-item {
 
 div.burning-airlines {
   background-image: linear-gradient(0deg, #ffb6d88c, #d3e8f8, #d3e8f8);
+  margin-top: 80px;
 }
 
 div.brain-train {

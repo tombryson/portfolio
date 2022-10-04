@@ -9,6 +9,7 @@ import TopBackgroundDark from '../images/top-background-dark.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
 import { faCoffee, faMoon, faVrCardboard } from '@fortawesome/free-solid-svg-icons'
+import Arrow from '../images/arrow.png';
 
 
 const icon = <FontAwesomeIcon icon={faMoon} />
@@ -29,7 +30,6 @@ function App() {
   }, []);
 
 const navDark = (elements, navbar) => {
-  console.log(navbar)
   navbar.setAttribute("id","navbar-visible");
   elements.forEach((link) => {
   link.style.color = 'black';
@@ -49,8 +49,6 @@ const navLight = (elements, navbar) => {
   }
   );
 };
-
-
 
 const IH = window.innerHeight;
 const IW = window.innerWidth;
@@ -81,11 +79,10 @@ useEffect(() => {
   navbarTheme();
 }, [scrollPosition]);
 
-
   return (
     <>
     <div>
-      <div className="waterfalls background-overlay" id="home">
+      <div className="waterfalls background-overlay" tabIndex="0" id="home">
         <div className='content-top'>
             <h1 id='top'>
               <div className='name'>TOM BRYSON: FULL STACK<span className='web'>WEB</span><br></br>DEVELOPER
@@ -99,14 +96,15 @@ useEffect(() => {
     <div className='hello'>
       <div class="container">
         <div class="row">
-        <div class="col align-self-start">
-        <h1 className='welcome'>Welcome</h1>
+        <div className='text-box box-1'>
+        <h1 className='welcome spartan'>Welcome</h1>
         </div>
-        <div class="col align-self-center">
-          <p className='my-name'>My name is Tom Bryson, a Full-stack developer based in Melbourne</p>
+        <div className='text-box box-2'>
+          <p className='my-name spartan'>My name is Tom Bryson, a Full-stack developer based in Melbourne</p>
         </div>
-        <div class="col align-self-end">
-          <h2 className='my-projects'> Here are some of my Projects </h2>
+        <div className='text-box box-3'>
+          <h2 className='my-projects spartan'> Here are a few of my projects </h2>
+          <img src={Arrow} className='arrow' alt='an arrow'></img>
         </div>
        </div>
     </div>

@@ -17,9 +17,27 @@ import {
   MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
+const _ = require('lodash');
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
+  const [style, setStyle] = useState('light');
+
+  const lightDark = document.getElementById('light-dark');
+  const waterfall = document.getElementsByClassName('background-overlay');
+
+
+  const modeSwap =_.debounce(function () {
+    if (style === 'light') {
+      waterfall[0].classList.add("background-dark");
+      setStyle('dark')
+    } else
+    if (style === 'dark') {
+      waterfall[0].classList.remove('background-dark');
+      setStyle('light')
+    }
+  }, 1200);
+
 
   return (
     <MDBNavbar expand='lg' dark bgColor='transparent'>
@@ -61,7 +79,7 @@ export default function App() {
               </MDBDropdown>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBBtn outline rounded className='mx-2' color='light' floating tag='a'>
+              <MDBBtn outline rounded className='mx-2' onClick={() => modeSwap()} id='light-dark' color='light' floating tag='a'>
               <MDBIcon fas icon="sun" />
               </MDBBtn>
             </MDBNavbarItem>
