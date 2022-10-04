@@ -4,6 +4,7 @@ import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
 import Braintrain from './Braintrain.js';
 import Burning from './Burning.js';
+import Carousel from './Carousel.jsx';
 import TopBackgroundLight from '../images/top-background-light.gif'
 import TopBackgroundDark from '../images/top-background-dark.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -127,6 +128,7 @@ useEffect(() => {
       </div>
         <div className='skills'>
           <h1>Skills:</h1>
+          <Carousel />
         </div>
     </>
   );

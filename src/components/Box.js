@@ -31,11 +31,7 @@ const Box = ({ num, projectClass, project, children }) => {
           animate={control}
           ref={ref}
         >
-          <div className='project-underlay'>
-          </div>
-          <div className={`project-overlay ${projectClass}`}>
-          <div>{children}</div>
-          </div>
+          {children}
         </motion.div>
         </>
       );

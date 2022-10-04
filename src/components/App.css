@@ -259,8 +259,8 @@ li.nav-item {
 }
 
 .my-name {
-  font-size: min(28px, 4vw);
-  width: 20vw;
+  font-size: min(28px, 6vw);
+  width: max(200px, 20vw);
   text-align: left;
   display: inline-block;
   margin-left: 0vw;
@@ -271,7 +271,13 @@ li.nav-item {
 }
 
 .arrow {
-  width: clamp(34%, 25rem, 420px);
+  width: clamp(34%, 25rem, 400px);
+}
+
+@media screen and (min-width: 800px) {
+  .arrow {
+    margin: 0 4rem 0px 0;
+    }
 }
 
 .project-container {
@@ -319,12 +325,6 @@ li.nav-item {
   }
 }
 
-@media (min-width: 1400px) {
-.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1510px!important;
-  }
-}
-
 .project-overlay {
   height: 45vh;
   min-height: 240px;
@@ -351,17 +351,38 @@ li.nav-item {
 
 div.burning-airlines {
   background-image: linear-gradient(0deg, #ffb6d88c, #d3e8f8, #d3e8f8);
-  margin-top: 80px;
+  padding-top: clamp(8vw, 225px, 26vh);
 }
 
 div.brain-train {
-  background-image: linear-gradient(0deg, transparent, #ffb6d88c);
+  background-image: linear-gradient(0deg, #fa2e2e60, #fa2e2e88, #ffb6d88c);
 }
 
 div.tapedeck {
-  background-image: linear-gradient(transparent, green);
+  background-image: linear-gradient(0deg, #00ff00a8, #00ff00, #fa2e2e60);
 }
 
 div.tic-tac-toe {
-  background-image: linear-gradient(transparent, #ccc);
+  background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #00ff00a8);
+}
+
+.tac-tac-toe {
+  /* background-image: url('../images/tictactoe.png'); */
+}
+
+.tictac-underlay {
+  width: 25vw;
+  display: inline-block;
+  margin-left: 62%;
+}
+
+.stage {
+  border: solid;
+  height: 23vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  border-radius: 61px 61px 71px 19px;
+  background-image: url('../images/background-code.jpg');
 }
