@@ -40,7 +40,7 @@ export default function App() {
 
 
   return (
-    <MDBNavbar expand='lg' dark bgColor='transparent'>
+    <MDBNavbar className='navbar-expand' expand='lg' dark bgColor='transparent'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#'><img src={brand} width="40px"></img></MDBNavbarBrand>
 

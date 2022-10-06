@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 @import '~mdb-ui-kit/css/mdb.min.css';
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 @font-face {
@@ -189,6 +190,10 @@ nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
   z-index: 10;
 }
 
+a.navbar-brand {
+  height: 58px;
+}
+
 .navbar>.container-fluid {
   display: flex;
   align-content: space-around;
@@ -222,10 +227,13 @@ li.nav-item {
   font-weight: bold!important;
 }
 
-/* .navbar-expand-lg {
-  flex-wrap: nowrap!important;
-  justify-content: flex-start!important;
-} */
+.btn:first-child:hover, :not(.btn-check)+.btn:hover {
+  background-color: #c3c3c3a8!important;
+}
+
+a.dropdown-toggle.nav-link:hover {
+  cursor: pointer;
+}
 
 .btn-floating, [class*=btn-outline-].btn-floating {
   padding: 1px;
@@ -238,6 +246,12 @@ li.nav-item {
 
 .bg-transparent {
   transition: 0.8s ease-in-out;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  text-decoration: none;
+  position: sticky;
+  display: block!important;
 }
 
 .welcome {
@@ -271,7 +285,7 @@ li.nav-item {
 }
 
 .arrow {
-  width: clamp(34%, 25rem, 400px);
+  width: clamp(32%, 22em, 348px);
 }
 
 @media screen and (min-width: 800px) {
@@ -302,26 +316,38 @@ li.nav-item {
 
 .project-underlay {
   height: 45vh;
-  width: 80vw;
+  width: 40vw;
   min-height: 240px;
   border: solid black 4px;
   border-radius: 10px;
   background-color: rgb(0, 0, 0);
   padding: 1%;
-  margin: 8%;
+  margin: 8% 8% 8% 52%;
   position: absolute;
+  box-shadow: 3px 4px 12px 5px #303030c7;
 }
 
 @media screen and (max-width: 992px) {
   .project-underlay {
     min-width: 300px;
-    width: 42vw;
-    height: 90vh;
-    min-height: 240px;
+    width: 54vw;
+    height: 40vh;
+    margin: 49.8vh 0% 0% 0%;
+    min-height: 38vh;
+    box-shadow: none;
   }
+  .project-overlay {
+    width: 54vw!important;
+}
   .project-container {
     justify-content: center;
     display: flex;
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .project-underlay {
+    margin: 47.8vh 0% 0% 0%;
   }
 }
 
@@ -329,13 +355,14 @@ li.nav-item {
   height: 45vh;
   min-height: 240px;
   min-width: 300px;
-  width: 42vw;
+  max-height: 608px;
+  width: 45vw;
   border: solid black 4px;
   border-radius: 10px;
   background-color: pink;
   color: rgb(0, 0, 0);
-  padding: 1%;  
-  margin: 8%;
+  padding: 1%;
+  margin: 12% 8% 8% 8%;
   justify-content: center;
   position: absolute;
 }
@@ -352,6 +379,40 @@ li.nav-item {
 div.burning-airlines {
   background-image: linear-gradient(0deg, #ffb6d88c, #d3e8f8, #d3e8f8);
   padding-top: clamp(8vw, 225px, 26vh);
+}
+
+.burning {
+  width: max(25%, 125px);
+  margin: 2rem;
+}
+
+.card-text-box {
+  background-color: rgba(255, 255, 255, 0.397);
+  height: 35vh;
+  border-radius: 10px;
+  padding: 3vw 2vw 2vw 2vw;
+  margin-top: 2rem;
+  font-family: 'League Spartan', sans-serif;
+  font-size: clamp(22px, 25px, 30px);
+  color: black;
+  margin: 1.5rem 1vw;
+  list-style: disc;
+}
+
+.text-box {
+  margin-top: 1vh;
+}
+
+.img-logo {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin: 0em 0 0 0;
+}
+
+.square {
+  height: 4vw;
+  width: 4vw;
 }
 
 div.brain-train {
@@ -381,8 +442,10 @@ div.tic-tac-toe {
   height: 23vh;
   width: 60vw;
   display: flex;
+  background-position: center;
   justify-content: center;
   background-color: black;
   border-radius: 61px 61px 71px 19px;
   background-image: url('../images/background-code.jpg');
 }
+

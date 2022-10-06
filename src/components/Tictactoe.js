@@ -9,7 +9,7 @@ const Tictactoe = () => {
             </div>
             <div className={`project-overlay tictactoe-card`}>
                 <div>
-                    <h1>
+                    <h1 className='spartan'>
                     Tick Tac Toe
                     </h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellendus. Totam nihil similique a repellat minus dolor amet quasi. Corporis nulla quaerat iste, sed quasi ab dolorem maxime minima animi.

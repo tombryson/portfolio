@@ -41,7 +41,7 @@ const navDark = (elements, navbar) => {
 const navLight = (elements, navbar) => {
   navbar.removeAttribute("id", "navbar-visible");
   elements.forEach((link, idx) => {
-    if (idx <= 3) {
+    if (idx <= 4) {
     link.style.color = 'hsla(0,0%,100%,.55)';
     }
     if (idx === 1) {
@@ -56,6 +56,7 @@ const IW = window.innerWidth;
 const navbarTheme = () => {
   const elements = document.querySelectorAll("a");
   const navbar = document.getElementsByTagName("nav")[0]
+  console.log(navbar)
   if (IH < 1000 && IW > 350) {
     if (scrollPosition/IH > 0.70) {
       navDark(elements, navbar);
