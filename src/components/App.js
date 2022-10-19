@@ -4,7 +4,6 @@ import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
 import Braintrain from './Braintrain.js';
 import Burning from './Burning.js';
-import Carousel from './Carousel.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
 import { faMoon } from '@fortawesome/free-solid-svg-icons'
@@ -125,7 +124,6 @@ useEffect(() => {
       </div>
         <div className='skills'>
           <h1>Skills:</h1>
-          <Carousel />
         </div>
     </>
   );
