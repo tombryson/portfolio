@@ -46,6 +46,8 @@ const navLight = (elements, navbar) => {
 
 const IH = window.innerHeight;
 const IW = window.innerWidth;
+
+useEffect(() => {
 const navbarTheme = () => {
   const elements = document.querySelectorAll("a");
   const navbar = document.getElementsByTagName("nav")[0]
@@ -70,8 +72,7 @@ const navbarTheme = () => {
       }
     }
 }
-useEffect(function () {
-  navbarTheme();
+  navbarTheme()
 }, [scrollPosition]);
 
   return (
