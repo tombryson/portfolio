@@ -4,9 +4,7 @@ import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
 import Braintrain from './Braintrain.js';
 import Burning from './Burning.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
-import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import Arrow from '../images/arrow.png';
 
 // const element = <FontAwesomeIcon icon={faCoffee} />
@@ -72,7 +70,7 @@ const navbarTheme = () => {
       }
     }
 }
-useEffect(() => {
+useEffect(function () {
   navbarTheme();
 }, [scrollPosition]);
 
