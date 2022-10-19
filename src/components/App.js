@@ -44,14 +44,13 @@ const navLight = (elements, navbar) => {
   );
 };
 
-const IH = window.innerHeight;
-const IW = window.innerWidth;
 
 useEffect(() => {
+const IH = window.innerHeight;
+const IW = window.innerWidth;
 const navbarTheme = () => {
   const elements = document.querySelectorAll("a");
   const navbar = document.getElementsByTagName("nav")[0]
-  console.log(navbar)
   if (IH < 1000 && IW > 350) {
     if (scrollPosition/IH > 0.70) {
       navDark(elements, navbar);
