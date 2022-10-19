@@ -8,6 +8,11 @@
   src: url("../../public/leaguespartan-bold-webfont.woff2");
 }
 
+.b {
+  /* autoprefixer: off */
+  transition: 1s; /* will not be prefixed */
+}
+
 body {
   background-color: #f9fcff!important;
 }
