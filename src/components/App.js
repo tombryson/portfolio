@@ -5,15 +5,11 @@ import Tictactoe from './Tictactoe.js';
 import Braintrain from './Braintrain.js';
 import Burning from './Burning.js';
 import Carousel from './Carousel.jsx';
-import TopBackgroundLight from '../images/top-background-light.gif'
-import TopBackgroundDark from '../images/top-background-dark.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
-import { faCoffee, faMoon, faVrCardboard } from '@fortawesome/free-solid-svg-icons'
+import { faMoon } from '@fortawesome/free-solid-svg-icons'
 import Arrow from '../images/arrow.png';
 
-
-const icon = <FontAwesomeIcon icon={faMoon} />
 // const element = <FontAwesomeIcon icon={faCoffee} />
 
 function App() {
@@ -102,7 +98,7 @@ useEffect(() => {
         <h1 className='welcome spartan'>Welcome</h1>
         </div>
         <div className='text-box box-2'>
-          <p className='my-name spartan'>My name is Tom Bryson, a Full-stack developer based in Melbourne</p>
+          <p className='my-name spartan'>My name is Tom Bryson, a Full-stack developer based in Melbourne.</p>
         </div>
         <div className='text-box box-3'>
           <h2 className='my-projects spartan'> Here are a few of my projects </h2>

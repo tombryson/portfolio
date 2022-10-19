@@ -1,16 +1,27 @@
 import Box from './Box.js'
 import Burningairlines from '../images/burning-airlines.jpg';
+import BurningairlinesSeats from '../images/burning-airlines-seat-map.png'
+import BurningairlinesFlights from '../images/burning-airlines-flights.png';
 
 const Burning = () => {
+    const _handleOnClick = (e) => {
+        e.preventDefault();
+        window.open('http://www.google.com','_blank').focus();
+    }
+
     return (
         <Box projectClass={'burning-airlines-card'} project={'Burning Airlines'}>
             <div className='project-underlay'>
                 <div className='container img-logo'>
-                    <img className='burning' src={Burningairlines} alt='logo of a plane'></img>
+                    <img className='burning' onClick={(e) => _handleOnClick(e)} src={Burningairlines} alt='logo of a plane'></img>
                 </div>
-                <div className='box-1 square'>
-                <div className='box-2 square'>
-                </div>
+                <div className='img-container'>
+                    <div className='box-1 square'>
+                        <img className='seat-map-img' src={BurningairlinesSeats} alt='pictures of seats'></img>
+                    </div>
+                    <div className='square'>
+                        <img className='burning-search' src={BurningairlinesFlights} alt='flight log on app'></img>
+                    </div>
                 </div>
             </div>
             <div className={`project-overlay burning-airlines-card`}>

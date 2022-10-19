@@ -23,7 +23,7 @@ export default function App() {
   const [showBasic, setShowBasic] = useState(false);
   const [style, setStyle] = useState('light');
 
-  const lightDark = document.getElementById('light-dark');
+  // const lightDark = document.getElementById('light-dark');
   const waterfall = document.getElementsByClassName('background-overlay');
 
 
@@ -42,7 +42,7 @@ export default function App() {
   return (
     <MDBNavbar className='navbar-expand' expand='lg' dark bgColor='transparent'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'><img src={brand} width="40px"></img></MDBNavbarBrand>
+        <MDBNavbarBrand href='#'><img src={brand} alt='brand' width="40px"></img></MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'

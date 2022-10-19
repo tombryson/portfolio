@@ -1,8 +1,7 @@
-import Tictactoe from "./Tictactoe.js";
 import './App.css';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const boxVariant = {
     visible: { opacity: 1, scale: 1, x: '0px', transition: { duration: 0.6 } },
