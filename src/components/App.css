@@ -52,15 +52,18 @@ h1:hover > .name {
 .waterfalls {
   background: url(../images/top-background-light.gif) center no-repeat;
   background-position: left;
+  transition: 1s all;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.waterfalls:after {
   background: url(../images/top-background-dark.gif) hidden center;
-  transition: 2s all;
 }
 
 .background-dark {
-  background: url(../images/top-background-dark.gif) center;
+  background: url(../images/top-background-dark.gif) center no-repeat;
   background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
   transition: 2s ease;
   animation-fill-mode: forwards;
   animation-play-state: running;
@@ -84,6 +87,7 @@ h1:hover > .name {
 .background-overlay {
   height: 100%;
   width: 100%;
+  transition: 1s all;
   display: table;
   position: relative;
   background-size: cover;
@@ -409,7 +413,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 
 div.burning-airlines {
-  background-image: linear-gradient(0deg, #ffb6d88c, #d3e8f8, #d3e8f8);
+  background-image: linear-gradient(0deg, #6ec2b494, #d3e8f8, #d3e8f8);
   padding-top: clamp(8vw, 225px, 26vh);
 }
 
@@ -477,16 +481,16 @@ img.burning:hover {
   justify-content: center;
 }
 
-div.brain-train {
-  background-image: linear-gradient(0deg, #fa2e2e60, #fa2e2e88, #ffb6d88c);
+div.connect-four {
+  background-image: linear-gradient(0deg, #488a42ab, #3e8138b0, #6ec2b494);
 }
 
 div.tapedeck {
-  background-image: linear-gradient(0deg, #00ff00a8, #00ff00, #fa2e2e60);
+  background-image: linear-gradient(0deg, #31d131a9, #00ff00, #488a42ab);
 }
 
 div.tic-tac-toe {
-  background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #00ff00a8);
+  background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #76a8d1ad, #31d131a9);
 }
 
 .tac-tac-toe {

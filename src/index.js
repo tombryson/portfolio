@@ -15,4 +15,3 @@ root.render(
     <HoverFX />
     </>
 );
-

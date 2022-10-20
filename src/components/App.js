@@ -2,12 +2,9 @@ import { useState, useEffect, } from 'react'
 import './App.css';
 import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
-import Braintrain from './Braintrain.js';
+import Connectfour from './Connectfour.js';
 import Burning from './Burning.js';
-// import { faSolid fa-cloud-sun} from '@fortawesome/free-solid-svg-icons'
 import Arrow from '../images/arrow.png';
-
-// const element = <FontAwesomeIcon icon={faCoffee} />
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -110,8 +107,8 @@ const navbarTheme = () => {
         <div className='burning-airlines project'>
         <Burning />
         </div>
-        <div className='brain-train project'>
-        <Braintrain />
+        <div className='connect-four project'>
+        <Connectfour />
         </div>
         <div className='tapedeck project'>
         <Tapedeck />

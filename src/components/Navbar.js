@@ -23,11 +23,9 @@ export default function App() {
   const [showBasic, setShowBasic] = useState(false);
   const [style, setStyle] = useState('light');
 
-  // const lightDark = document.getElementById('light-dark');
-  const waterfall = document.getElementsByClassName('background-overlay');
-
-
-  const modeSwap =_.debounce(function () {
+  const modeSwap = () => {
+    const waterfall = document.getElementsByClassName('background-overlay');
+    console.log(waterfall)
     if (style === 'light') {
       waterfall[0].classList.add("background-dark");
       setStyle('dark')
@@ -36,13 +34,14 @@ export default function App() {
       waterfall[0].classList.remove('background-dark');
       setStyle('light')
     }
-  }, 1200);
+  }
 
 
   return (
     <MDBNavbar className='navbar-expand' expand='lg' dark bgColor='transparent'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'><img src={brand} alt='brand' width="40px"></img></MDBNavbarBrand>
+        <MDBNavbarBrand href='#'><img src={brand} 
+        alt='brand' width="40px"></img></MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
@@ -72,7 +71,7 @@ export default function App() {
                 <MDBDropdownMenu>
                 <MDBDropdownItem link><li><Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="burning-airlines" spy={true} smooth={true}>Burning Airlines</Link></li></MDBDropdownItem>
-                  <MDBDropdownItem link><li><Link activeClass="active" to="brain-train" spy={true} smooth={true}>Brain Train</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="connectfour" spy={true} smooth={true}>Connect Four</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="tapedeck" spy={true} smooth={true}>Tapedeck</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="tic-tac-toe" spy={true} smooth={true}>Tic Tac Toe</Link></li></MDBDropdownItem>
                 </MDBDropdownMenu>
