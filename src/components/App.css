@@ -359,9 +359,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   .project-underlay {
     margin: 49.0vh 0% 0% 0%;
   }
-  .card-text-box {
-    font-size: clamp(17px, 3.1vw, 22%)!important;
-}
 }
 
 .project-overlay {
@@ -381,26 +378,26 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 
 .img-container {
-  width: 100%;
-  height: 70%;
+  width: 94%;
+  height: 101%;
+  margin-left: 5%;
   display: flex;
+  align-content: space-around;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
+  justify-content: flex-start;
 }
 
-@media screen and (min-width: 1400px) {
-  .img-container {
-      width: 75%;
-  }
-  .burning-search {
-    margin-bottom: clamp(20px, 8vw, 40%)!important;
-  }
-  .seat-map-img {
-    margin-bottom: clamp(20px, 8vw, 40%)!important;
-  }
+.screenshot {
+  display: flex!important;
+  flex-direction: row;
+  margin: 2% 2% 2% 2%;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: flex-end;
+  padding: 16px;
+  background-image: linear-gradient(148deg, #ffe0ad, #f49c3a, #e8532f, #350a0a);
+  border-radius: 41% 81% 43% 61% / 52% 75% 20% 40%;
 }
 
 .project {
@@ -422,7 +419,7 @@ div.burning-airlines {
   margin: 2rem 0 24px 0rem;
   background-color: #e3f2ff;
   border-radius: 5%;
-  padding: 2% 4% 2% 4%;
+  padding: 6% 8% 6% 8%;
   box-shadow: inset 0 0 2px 4px #303030c2;
   transition: 0.6s ease;
 }
@@ -436,28 +433,19 @@ img.burning:hover {
   box-shadow: inset 0px 0px 4px 5px #646464e6, 0 0 12px white!important;
 }
 
-.burning-search {
+.screenshot img {
   border-radius: 26% 26% 10% 10% / 8% 8% 2% 2%;
-  width: max(6vw, 8rem, 45%);
-  box-sizing: content-box;
-  margin-bottom: clamp(20px, 8vw, 8%);
-}
-
-.seat-map-img {
-  border-radius: 26% 26% 10% 10% / 8% 8% 2% 2%;
-  width: max(6vw, 8rem, 45%);
-  box-sizing: content-box;
-  margin-bottom: clamp(20px, 8vw, 8%);
+  width: 5.4rem;
 }
 
 .card-text-box {
   background-color: rgba(255, 255, 255, 0.397);
-  height: 34vh;
+  height: 65%;
   border-radius: 10px;
   padding: 3vw 2vw 2vw 2vw;
   margin-top: 2rem;
   font-family: 'League Spartan', sans-serif;
-  font-size: clamp(16px, 23px, 4vw);
+  font-size: clamp(12px, 14px, 0.8rem);
   color: black;
   margin: 1.5rem 1vw;
   list-style: disc;
@@ -474,9 +462,8 @@ img.burning:hover {
   margin: 0em 0 0 0;
 }
 
-.square {
-  width: 50%;
-  height: fit-content;
+.column {
+  width: 33%;
   display: flex;
   justify-content: center;
 }
