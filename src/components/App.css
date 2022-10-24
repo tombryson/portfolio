@@ -531,6 +531,14 @@ div.connect-four {
   width: 90%;
 }
 
+.connect-four-card {
+  background-image: URL("../images/Shreks_Swamp.webp");
+}
+
+.shrek-title {
+  color: white;
+}
+
 div.tapedeck {
   background-image: linear-gradient(0deg, #31d131a9, #00ff00, #488a42ab);
 }

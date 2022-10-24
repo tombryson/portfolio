@@ -21,9 +21,9 @@ const Connectfour = () => {
                     </div>
                 </div>
             </div>
-            <div className={`project-overlay connect-four-airlines-card`}>
+            <div className={`project-overlay connect-four-card`}>
                 <div>
-                    <h1 className='spartan'>
+                    <h1 className='spartan shrek-title'>
                     Connect Four
                     </h1>
                     </div>

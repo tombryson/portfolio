@@ -5,7 +5,7 @@ const Tictactoe = () => {
     return (
         <Box projectClass={'tictactoe-card'} project={'Tic-Tac-Toe'}>
             <div className='project-underlay'>
-            <img src={Tictac} className='tictac-underlay' alt='Screenshot of Tictactoe'></img>
+            {/* <img src={Tictac} className='tictac-underlay' alt='Screenshot of Tictactoe'></img> */}
             </div>
             <div className={`project-overlay tictactoe-card`}>
                 <div>
