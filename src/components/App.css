@@ -337,19 +337,51 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   .project-underlay {
     min-width: 300px;
     width: 54vw;
-    height: 42vh;
-    margin: 52.8vh 0% 0% 0%;
+    height: 40vh;
+    margin: 35.8vmax 0% 0% 0%;
     min-height: 38vh;
     box-shadow: none;
   }
   .project-overlay {
     width: 54vw!important;
+    height: 36vh!important;
 }
   .project-container {
     justify-content: center;
     display: flex;
   }
 }
+
+@media screen and (max-width: 840px) {
+  .project-underlay {
+    margin: 37.2vmax 0% 0% 0%;
+    padding-top: 30px;
+  }
+  .project-overlay {
+    height: 32vh!important;
+    min-height: 220px!important;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .project-overlay {
+    height: 29vh!important;
+}
+}
+
+@media screen and (max-width: 550px) {
+  .project-underlay {
+    margin: 37.0vmax 0% 0% 0%;
+    height: 36vh;
+  }
+  .project-overlay {
+    height: 29vh!important;
+}
+  h1 .spartan {
+    font-size: smaller;
+  }
+}
+
 
 .project-overlay {
   height: 45vh;
@@ -437,7 +469,7 @@ div.burning-airlines {
 }
 
 .burning {
-  width: max(25%, 125px);
+  width: min(80%, 125px);
   margin: 2rem 0 24px 0rem;
   background-color: #e3f2ff;
   border-radius: 5%;
@@ -457,7 +489,7 @@ img.burning:hover {
 
 .screenshot img {
   border-radius: 26% 26% 10% 10% / 8% 8% 2% 2%;
-  width: 5.4rem;
+  width: min(110%, 5.4rem);
 }
 
 .card-text-box {
