@@ -8,13 +8,9 @@
   src: url("../../public/leaguespartan-bold-webfont.woff2");
 }
 
-.b {
-  /* autoprefixer: off */
-  transition: 1s; /* will not be prefixed */
-}
-
 body {
   background-color: #f9fcff!important;
+  --angle: 145deg;
 }
 
 .top-background {
@@ -37,7 +33,7 @@ body {
   display: inline;
 }
 
-h1:hover > .name {
+h1 > .name {
   animation: fadeIn 4s;
   animation-fill-mode: forwards;
   right: 6vw;
@@ -159,31 +155,31 @@ span {
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
-  width: 10%;
-  box-shadow: 8vw 14vw 2vw 0.5vw #0b0b0b4d;
+  width: 13%;
+  /* box-shadow: 8vw 14vw 2vw 0.5vw #0b0b0b4d; */
   transition: all 2.0s cubic-bezier(0.25, 0.17, 0.3, 0.73);
-  border-radius: 26% 74% 33% 85% / 74% 19% 81% 26%;
-  border: #000000b5 2px solid;
-  background-color: #ffffff80;
-  border-style: dashed;
-  background-image: radial-gradient(white, #ffffff00);
+  /* border-radius: 26% 74% 33% 85% / 74% 19% 81% 26%; */
+  /* border: #000000b5 2px solid; */
+  /* background-color: #ffffff80; */
+  /* border-style: dashed; */
+  background-image: #ffffff00
 }
 
-#top:hover {
+#top {
   background-color: rgb(255 255 255 / 0%);
   background-image: radial-gradient(#ffffff, transparent);
   box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #00ffbd, inset -20px 0 80px #9200ff, inset 20px 0 300px #aed5ff, inset -20px 0 300px #ffffffe3, 0 0 50px #ffffffde, -9px 2px 80px #ffffffba, 10px 0 80px #0087ffb0;
-  padding: 2em 4em 4% 9%;
-  border: #000000d1 2px solid;
+  padding: 1em 5em 5% 10%;
+  /* border: #000000d1 2px solid; */
   color: black;
-  border-style: dashed;
+  /* border-style: dashed; */
   width: 13%;
   border-radius: 36% 58% 30% 80% / 49% 66% 28% 37%;
   margin-bottom: 10vh;
 }
 
 @media screen and (max-width: 1000px) {
-  #top:hover {
+  #top {
   padding-right: 200px;
   }
 }
@@ -329,7 +325,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   width: 40vw;
   min-height: 240px;
   border: solid black 4px;
-  border-radius: 10px;
+  border-radius: 9px;
   background-color: rgb(0, 0, 0);
   padding: 1%;
   margin: 8% 8% 8% 52%;
@@ -341,7 +337,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   .project-underlay {
     min-width: 300px;
     width: 54vw;
-    height: 62vh;
+    height: 42vh;
     margin: 52.8vh 0% 0% 0%;
     min-height: 38vh;
     box-shadow: none;
@@ -355,12 +351,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   }
 }
 
-@media screen and (max-width: 666px) {
-  .project-underlay {
-    margin: 49.0vh 0% 0% 0%;
-  }
-}
-
 .project-overlay {
   height: 45vh;
   min-height: 240px;
@@ -368,7 +358,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   max-height: 608px;
   width: 45vw;
   border: solid black 4px;
-  border-radius: 10px;
+  border-radius: 9px;
   background-color: pink;
   color: rgb(0, 0, 0);
   padding: 1%;
@@ -396,9 +386,41 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   height: 100%;
   align-items: flex-end;
   padding: 16px;
-  background-image: linear-gradient(148deg, #ffe0ad, #f49c3a, #e8532f, #350a0a);
-  border-radius: 41% 81% 43% 61% / 52% 75% 20% 40%;
+  border-radius: 67% 120% 62% 88% / 155% 144% 33% 41%;
+  animation: wobble 1.2s ease-in-out alternate infinite;
+  transition:--a 1.2s ease-in-out infinite;
+  --a:170deg;
 }
+
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 170deg;
+}
+
+@keyframes wobble {
+  50% {
+    border-radius: 72% 90% 52% 72% / 130% 114% 25% 32%;
+    --a:162deg;
+  }
+  100% {
+    border-radius: 72% 94% 62% 82% / 130% 124% 25% 32%;
+    --a:168deg;
+  }
+}
+
+.screenshot {
+  --a:170deg; /*  needed for firefox to have a valid output */
+  display:inline-block;
+  background-image: linear-gradient(var(--a), #fff2dc, #f49c3a, #e8532f, #350a0a);
+}
+
+.screenshot:hover {
+  --a: 150deg;
+  box-shadow: 0px 0px 10px 3px rgb(175, 12, 12);
+  border: black 1px solid;
+}
+
 
 .project {
   padding-top: 15vh;
@@ -475,6 +497,21 @@ div.connect-four {
 div.tapedeck {
   background-image: linear-gradient(0deg, #31d131a9, #00ff00, #488a42ab);
 }
+
+/* .tapedeck:after {
+  content: '';
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: -2rem; right: 0; bottom: -2rem; left: 0;
+  background-image: linear-gradient(red, yellow, green);
+  animation: rotate-gradient linear 1s infinite;
+}
+
+@keyframes rotate-gradient {
+  to { transform: rotate(360deg) }
+} */
+
 
 div.tic-tac-toe {
   background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #76a8d1ad, #31d131a9);
