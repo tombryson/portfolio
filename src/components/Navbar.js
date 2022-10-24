@@ -25,7 +25,6 @@ export default function App() {
 
   const modeSwap = () => {
     const waterfall = document.getElementsByClassName('background-overlay');
-    console.log(waterfall)
     if (style === 'light') {
       waterfall[0].classList.add("background-dark");
       setStyle('dark')
@@ -69,11 +68,11 @@ export default function App() {
                   My Projects
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                <MDBDropdownItem link><li><Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link></li></MDBDropdownItem>
-                  <MDBDropdownItem link><li><Link activeClass="active" to="burning-airlines" spy={true} smooth={true}>Burning Airlines</Link></li></MDBDropdownItem>
-                  <MDBDropdownItem link><li><Link activeClass="active" to="connectfour" spy={true} smooth={true}>Connect Four</Link></li></MDBDropdownItem>
-                  <MDBDropdownItem link><li><Link activeClass="active" to="tapedeck" spy={true} smooth={true}>Tapedeck</Link></li></MDBDropdownItem>
-                  <MDBDropdownItem link><li><Link activeClass="active" to="tic-tac-toe" spy={true} smooth={true}>Tic Tac Toe</Link></li></MDBDropdownItem>
+                <MDBDropdownItem link><li><Link activeClass="active" to="home" spy={true} smooth={false}>Home</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="burning-airlines" spy={true} smooth={false}>Burning Airlines</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="connect-four" spy={true} smooth={false}>Connect Four</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="tapedeck" spy={true} smooth={false}>Tapedeck</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="tic-tac-toe" spy={true} smooth={false}>Tic Tac Toe</Link></li></MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>

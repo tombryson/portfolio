@@ -433,11 +433,11 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 @keyframes wobble {
   50% {
     border-radius: 72% 90% 52% 72% / 130% 114% 25% 32%;
-    --a:162deg;
+    --a:160deg;
   }
   100% {
     border-radius: 72% 94% 62% 82% / 130% 124% 25% 32%;
-    --a:168deg;
+    --a:169deg;
   }
 }
 
@@ -465,7 +465,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 div.burning-airlines {
   background-image: linear-gradient(0deg, #6ec2b494, #d3e8f8, #d3e8f8);
-  padding-top: clamp(8vw, 225px, 26vh);
+  /* padding-top: clamp(8vw, 225px, 26vh); */
 }
 
 .burning {
@@ -524,6 +524,11 @@ img.burning:hover {
 
 div.connect-four {
   background-image: linear-gradient(0deg, #488a42ab, #3e8138b0, #6ec2b494);
+}
+
+.connect-four-logo {
+  padding-top: 2rem;
+  width: 90%;
 }
 
 div.tapedeck {
