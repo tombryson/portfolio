@@ -1,24 +1,29 @@
 import Box from './Box.js'
+import Connectfourtitle from '../images/connectfour-title.png'
 
-const Braintrain = () => {
+const Connectfour = () => {
+    const _handleOnClick = () => {
+
+    }
+
     return (
-        <Box projectClass={'brain-train'} project={'Brain Train'}>
+        <Box projectClass={'connect-four-card'} project={'Connect Four'}>
             <div className='project-underlay'>
-                <div className='container img-logo'>
-                    {/* <img className='connect-four' onClick={(e) => _handleOnClick(e)} src={connect-four} alt='logo of a plane'></img> */}
-                </div>
                 <div className='img-container'>
-                    <div className='box-1 square'>
-                        {/* <img className='seat-map-img' src={connect-four} alt='pictures of seats'></img> */}
+                    <div className='column-cf screenshot-connectfour'>
+                        {/* <img className='seat-map-img' src={BurningairlinesSeats} alt='pictures of seats'></img> */}
                     </div>
-                    <div className='square'>
-                        {/* <img className='connect-four-search' src={connect-four} alt='flight log on app'></img> */}
+                    <div className='column-cf screenshot-connectfour'>
+                        {/* <img className='burning-search' src={BurningairlinesFlights} alt='flight log on app'></img> */}
+                    </div>
+                    <div className='row-1 row'>
+                        <img className='connect-four-logo' onClick={(e) => _handleOnClick(e)} src={Connectfourtitle} alt='title of connect four game'></img>
                     </div>
                 </div>
             </div>
-            <div className={`project-overlay connect-four-airlines-card`}>
+            <div className={`project-overlay connect-four-card`}>
                 <div>
-                    <h1 className='spartan'>
+                    <h1 className='spartan shrek-title'>
                     Connect Four
                     </h1>
                     </div>
@@ -35,4 +40,4 @@ const Braintrain = () => {
 }
 
 
-export default Braintrain
+export default Connectfour

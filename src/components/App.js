@@ -77,7 +77,7 @@ const navbarTheme = () => {
       <div className="waterfalls background-overlay" tabIndex="0" id="home">
         <div className='content-top'>
             <h1 id='top'>
-              <div className='name'>TOM BRYSON: FULL STACK<span className='web'>WEB</span><br></br>DEVELOPER
+              <div className='name'>TOM BRYSON: <span className='full'>FULL</span> STACK<span className='web'>WEB</span><br></br>DEVELOPER
               </div> 
             </h1>
             <div className='darkMode'>
