@@ -1,9 +1,9 @@
 import Box from './Box.js'
-import Connectfourtitle from '../images/connectfour-title.png'
+import Connect4title from '../images/connectfour-title.png'
 
-const Connectfour = () => {
+const Connect4 = () => {
     const _handleOnClick = () => {
-
+        window.open('https://shrenekt-four.netlify.app/','_blank').focus();
     }
 
     return (
@@ -17,7 +17,7 @@ const Connectfour = () => {
                         {/* <img className='burning-search' src={BurningairlinesFlights} alt='flight log on app'></img> */}
                     </div>
                     <div className='row-1 row'>
-                        <img className='connect-four-logo' onClick={(e) => _handleOnClick(e)} src={Connectfourtitle} alt='title of connect four game'></img>
+                        <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='shrenekt four'></img>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@ const Connectfour = () => {
                     Connect Four
                     </h1>
                     </div>
-                    <div className='card-text-box'>
+                    <div className='connect4-box'>
                         <ul>
                             <li>A connect four game complete with character select and score tracking and reset.</li>
                             <br></br>
@@ -40,4 +40,4 @@ const Connectfour = () => {
 }
 
 
-export default Connectfour
+export default Connect4

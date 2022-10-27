@@ -2,7 +2,7 @@ import { useState, useEffect, } from 'react'
 import './App.css';
 import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
-import Connectfour from './Connectfour.js';
+import Connect4 from './Connect4.js';
 import Burning from './Burning.js';
 import Arrow from '../images/arrow.png';
 
@@ -108,7 +108,7 @@ const navbarTheme = () => {
         <Burning />
         </div>
         <div className='connect-four project'>
-        <Connectfour />
+        <Connect4 />
         </div>
         <div className='tapedeck project'>
         <Tapedeck />
