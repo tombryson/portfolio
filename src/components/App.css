@@ -367,6 +367,9 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     justify-content: center;
     display: flex;
   }
+  .tapedeck-box {
+    font-size: 12px!important;
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -376,7 +379,10 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   .project-overlay {
     height: 32vh!important;
     min-height: 220px!important;
-}
+  }
+  .tapedeck-box {
+    padding: 2px!important;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -401,6 +407,9 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   }
   .card-text-box, .connect4-box {
     font-size: 12px!important;
+  }
+  .screenshot-container {
+    height: auto!important;
   }
 
 @media screen and (max-width: 650px) and (min-height: 850px) {
@@ -551,7 +560,7 @@ img.burning:hover {
   background-color: rgba(255, 255, 255, 0.205);
   height: 72%;
   border-radius: 10px;
-  padding: 2vw;
+  padding: 0.2rem;
   margin-top: 2rem;
   font-family: 'League Spartan', sans-serif;
   font-size: clamp(12px, 2.0vmin, 3rem);
@@ -604,6 +613,7 @@ div.connect-four {
 .connect-four-logo {
   padding-top: 2rem;
   width: 95%!important;
+  max-width: 600px!important;
   margin: 0 auto;
   padding: 2% 0;
   transition: 0.04s all cubic-bezier(0.5, -0.2, 0.75, 0.72);
@@ -630,6 +640,7 @@ div.connect-four {
 .connectfour-img {
   width: 15vmin;
   border-radius: 10%;
+  box-shadow: 0px 0px 6px 6px #84a1728f;
 }
 
 .connectfour-img:hover {
@@ -640,8 +651,8 @@ div.connect-four {
 .screenshot-container {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
   align-items: center;
+  height: 34vh;
 }
 
 .landscape {
@@ -663,10 +674,38 @@ div.tapedeck {
   background-image: linear-gradient(0deg, #31d131a9, #00ff00, #488a42ab);
 }
 
+.td-container {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.td-screencontainer {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60%;
+}
+
 .tapedeck-logo {
-  width: 30%!important;
+  width: max(90px, 18vmin)!important;
   border-radius: 20%;
-  margin-top: 2vh!important;
+  max-width: 200px!important;
+  padding: 8px 0 8px 0px
+}
+
+.tapedeck-logo:hover {
+  scale: 0.99;
+  box-shadow: 0px -1px 6px 4px #e5e5e58f;
+  cursor: pointer;
+}
+
+.td-screen {
+  padding: 0px!important;
+  margin: 20px 2px 2px 2px;
+  height: 80%;
 }
 
 .tape {
@@ -684,6 +723,7 @@ div.tapedeck {
 .tapedeck-box {
   background-color: black;
   color: white;
+  padding: 2rem;
 }
 
 
