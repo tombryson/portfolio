@@ -7,7 +7,7 @@ import FireIcon from '../images/fire-icon-png.png';
 const Burning = () => {
     const _handleOnClick = (e) => {
         e.preventDefault();
-        window.open('http://www.google.com','_blank').focus();
+        window.open('https://burning-airlines-177.herokuapp.com/','_blank').focus();
     }
 
     return (
@@ -33,7 +33,7 @@ const Burning = () => {
                     </div>
                     <div className='card-text-box'>
                         <ul>
-                            <li className='fire-dot'> A mobile-first flight booking app using Ruby on Rails and ReactJS.</li>
+                            <li className='fire-dot'>A mobile-first flight booking app using Ruby on Rails and ReactJS.</li>
                             <br></br>
                             <li className='fire-dot'>Users can navigate through a pre-seeded list of flights and choose their seats, which are unique to each user and flight.</li>
                         </ul>

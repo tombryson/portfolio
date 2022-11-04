@@ -35,6 +35,11 @@ export default function App() {
     }
   }
 
+  const _handleOnClick = () => {
+    // e.preventDefault();
+    window.open('www.linkedin.com/in/tom-bryson.html','_blank').focus();
+  }
+
 
   return (
     <MDBNavbar className='navbar-expand' expand='lg' dark bgColor='transparent'>
@@ -59,7 +64,7 @@ export default function App() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>LinkedIn</MDBNavbarLink>
+              <MDBNavbarLink  href='www.linkedin.com/in/tom-bryson.com' onClick={() => _handleOnClick()}>LinkedIn</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>

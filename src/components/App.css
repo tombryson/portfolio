@@ -11,6 +11,12 @@
 body {
   background-color: #f9fcff!important;
   --angle: 145deg;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+h1.spartan {
+  margin-bottom: 5%;
 }
 
 .top-background {
@@ -161,8 +167,9 @@ h1 > .name {
   margin: 0 auto;
   text-transform: uppercase;
   width: 13%;
-  transition: all 2.0s cubic-bezier(0.25, 0.17, 0.3, 0.73);
-  background-image: #ffffff00
+  transition: all 1.2s cubic-bezier(0.25, 0.17, 0.3, 0.73);
+  background-image: #ffffff00;
+  border-radius: 50px;
 }
 
 #top {
@@ -174,7 +181,7 @@ h1 > .name {
   border-style: dashed;
   margin-bottom: 10vh!important;
   width: 13%;
-  border-radius: 36% 70% 30% 60% / 49% 80% 28% 37%;
+  /* border-radius: 36% 70% 30% 60% / 49% 80% 28% 37%; */
 }
 
 h1#top:hover {
@@ -194,11 +201,6 @@ h1#top:hover div {
   #top {
   padding-right: 200px;
   }
-}
-
-#top::after {
-  background-image: url('https://pics.clipartpng.com/Open_Door_White_PNG_Clip_Art-2396.png');
-  /* content: url('https://pics.clipartpng.com/Open_Door_White_PNG_Clip_Art-2396.png'); */
 }
 
 nav.navbar-dark.navbar.navbar-expand-lg.bg-transparent {
@@ -359,7 +361,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   }
   .project-overlay {
     width: 54vw!important;
-    height: 36vh!important;
+    height: 32vh!important;
 }
   .project-container {
     justify-content: center;
@@ -386,7 +388,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 560px) {
   .project-underlay {
     margin: 37.0vmax 0% 0% 0%;
     height: 36vh;
@@ -400,6 +402,23 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   .card-text-box, .connect4-box {
     font-size: 12px!important;
   }
+
+@media screen and (max-width: 650px) and (min-height: 850px) {
+  .project-underlay {
+    margin: 35.0vmax 0% 0% 0%;
+    height: 36vh;
+  }
+  .project-overlay {
+    height: 30vh!important;
+  }
+  h1 .spartan {
+    font-size: smaller;
+  }
+  .card-text-box, .connect4-box {
+    font-size: 12px!important;
+  }
+}
+
 }
 
 
@@ -413,7 +432,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   border-radius: 9px;
   background-color: pink;
   color: rgb(0, 0, 0);
-  padding: 1%;
+  padding: 2%;
   margin: 12% 8% 8% 8%;
   justify-content: center;
   position: absolute;
@@ -477,6 +496,18 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   background-blend-mode: overlay;
 }
 
+.screen {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 2% 2% 2%;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: flex-end;
+  width: 30%;
+  padding: 20px;
+  border-radius: 67% 120% 62% 88% / 155% 144% 33% 41%;
+}
+
 
 .project {
   padding-top: 15vh;
@@ -516,11 +547,11 @@ img.burning:hover {
   width: max(70px, 6vw);
 }
 
-.card-text-box, .connect4-box {
-  background-color: rgba(255, 255, 255, 0.397);
-  height: 65%;
+.card-text-box, .connect4-box, .tapedeck-box {
+  background-color: rgba(255, 255, 255, 0.205);
+  height: 72%;
   border-radius: 10px;
-  padding: 3vw 2vw 2vw 2vw;
+  padding: 2vw;
   margin-top: 2rem;
   font-family: 'League Spartan', sans-serif;
   font-size: clamp(12px, 2.0vmin, 3rem);
@@ -535,6 +566,8 @@ img.burning:hover {
 
 .connect4-box {
   color: white;
+  font-size: max(12px, 2vmin)!important;
+  padding-top: 3vh;
 }
 
 .img-logo {
@@ -563,51 +596,95 @@ div.connect-four {
   background-image: linear-gradient(0deg, #488a42ab, #3e8138b0, #6ec2b494);
 }
 
+.cf-column {
+  width: 40%;
+  height: 80%;
+}
+
 .connect-four-logo {
   padding-top: 2rem;
-  width: 80%;
+  width: 95%!important;
+  margin: 0 auto;
   padding: 2% 0;
-  transition: 0.08s all ease;
+  transition: 0.04s all cubic-bezier(0.5, -0.2, 0.75, 0.72);
+  box-shadow: inset 0px 6px 19px 5px black;
 }
 
 .connect-four-logo:hover {
   background-image: linear-gradient(0deg, rgb(150 201 40 / 0%) 5%, rgb(99 168 49) 4%, transparent 20%), radial-gradient(rgb(0 0 0 / 14%) -20%, #38650d 150%);
   border-radius: 14px;
-  box-shadow: inset 0px 6px 19px 5px black;
-  padding: 1%;
+  box-shadow: inset 0px 6px 19px 5px black, 2px 1px 10px 0px #8acc4d;
+  scale: 0.99;
   background-size: 27px;
   cursor: pointer;
 }
 
 .connect-four-logo:active {
-  box-shadow: inset 0px 0px 4px 5px #646464e6, 0 0 12px white!important;
+  scale: 0.94;
 }
 
 .connect-four-card {
   background-image: URL("../images/Shreks_Swamp.webp");
 }
 
+.connectfour-img {
+  width: 15vmin;
+  border-radius: 10%;
+}
+
+.connectfour-img:hover {
+  scale: 2.0;
+  z-index: 10000;
+}
+
+.screenshot-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.landscape {
+  width: 18vmin;
+}
+
+.tapedeck-card {
+  background-image: linear-gradient(38deg, #09f209 70%, #43ff00fa 75%);
+}
+
 .shrek-title {
-  color: white;
+  color: #75e014;
+  background: -webkit-linear-gradient(300deg, #61dc00b5, #b4ffbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff00;
 }
 
 div.tapedeck {
   background-image: linear-gradient(0deg, #31d131a9, #00ff00, #488a42ab);
 }
 
-/* .tapedeck:after {
-  content: '';
-  display: block;
-  z-index: -1;
+.tapedeck-logo {
+  width: 30%!important;
+  border-radius: 20%;
+  margin-top: 2vh!important;
+}
+
+.tape {
   position: absolute;
-  top: -2rem; right: 0; bottom: -2rem; left: 0;
-  background-image: linear-gradient(red, yellow, green);
-  animation: rotate-gradient linear 1s infinite;
+  opacity: 20%;
+  width: 60vmax;
+  right: 0rem;
+  animation: rotate-gradient linear 10s infinite;
 }
 
 @keyframes rotate-gradient {
   to { transform: rotate(360deg) }
-} */
+}
+
+.tapedeck-box {
+  background-color: black;
+  color: white;
+}
 
 
 div.tic-tac-toe {

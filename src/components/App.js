@@ -103,23 +103,25 @@ const navbarTheme = () => {
     <div>
     </div>
     </div>
-      <div className='projects'>
-        <div className='burning-airlines project'>
-        <Burning />
-        </div>
-        <div className='connect-four project'>
-        <Connect4 />
-        </div>
-        <div className='tapedeck project'>
-        <Tapedeck />
-        </div>
-        <div className='tic-tac-toe project'>
-        <Tictactoe />
-        </div>
+    <div className='projects'>
+      <div className='burning-airlines project'>
+      <Burning />
       </div>
-        <div className='skills'>
+      <div className='connect-four project'>
+      <Connect4 />
+      </div>
+      <div className='tapedeck project'>
+      <Tapedeck />
+      </div>
+      <div className='tic-tac-toe project'>
+      <Tictactoe />
+      </div>
+      <div className='project'>
+        <div className='skills stage'>
           <h1>Skills:</h1>
         </div>
+      </div>
+    </div>
     </>
   );
 }
