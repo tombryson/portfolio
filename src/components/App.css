@@ -2,6 +2,7 @@
 /* @import '~mdb-ui-kit/css/mdb.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&display=swap');
 /* @import 'bootstrap/dist/css/bootstrap.min.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,800&display=swap');
 
 @font-face {
   font-family: "leaguespartan-bold";
@@ -341,13 +342,17 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   min-height: 240px;
   border: solid black 4px;
   border-radius: 9px;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   padding: 1%;
   padding-top: 30px;
   margin: 8% 8% 8% 52%;
   position: absolute;
   box-shadow: 3px 4px 12px 5px #303030c7;
   min-height: 340px;
+}
+
+.see-through {
+  background: linear-gradient(16deg, black 63%, transparent 165%);
 }
 
 @media screen and (max-width: 992px) {
@@ -406,7 +411,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
     font-size: smaller;
   }
   .card-text-box, .connect4-box {
-    font-size: 12px!important;
+    font-size: 11px!important;
   }
   .screenshot-container {
     height: auto!important;
@@ -575,7 +580,7 @@ img.burning:hover {
 
 .connect4-box {
   color: white;
-  font-size: max(12px, 2vmin)!important;
+  font-size: max(12px, 2vmin);
   padding-top: 3vh;
 }
 
@@ -599,6 +604,10 @@ img.burning:hover {
   width: 33%;
   display: flex;
   justify-content: center;
+}
+
+.ttt-screen {
+  width: 50%;
 }
 
 div.connect-four {
@@ -641,18 +650,22 @@ div.connect-four {
   width: 15vmin;
   border-radius: 10%;
   box-shadow: 0px 0px 6px 6px #84a1728f;
+  cursor: pointer;
 }
 
 .connectfour-img:hover {
-  scale: 2.0;
+  scale: 1.9;
   z-index: 10000;
+  transition: 0.4s;
+  transition-timing-function: cubic-bezier(0.2, 1.15, 0.96, 1.06);
 }
 
 .screenshot-container {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  height: 34vh;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .landscape {
@@ -675,7 +688,7 @@ div.tapedeck {
 }
 
 .td-container {
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: right;
 }
@@ -690,15 +703,15 @@ div.tapedeck {
 }
 
 .tapedeck-logo {
-  width: max(90px, 18vmin)!important;
+  width: max(90px, 14vmin)!important;
   border-radius: 20%;
   max-width: 200px!important;
-  padding: 8px 0 8px 0px
+  padding: 8px 0px 8px 0px;
 }
 
 .tapedeck-logo:hover {
   scale: 0.99;
-  box-shadow: 0px -1px 6px 4px #e5e5e58f;
+  box-shadow: 12px -13px 17px 12px #a606ff8f, -9px 8px 20px 0px white;
   cursor: pointer;
 }
 
@@ -726,19 +739,76 @@ div.tapedeck {
   padding: 2rem;
 }
 
+.tictactoe-card {
+  background-color: rgb(131 176 213);
+}
+
+.tictactoe-box {
+  background-color: rgb(246 246 246);
+  padding: 2vw;
+}
+
 
 div.tic-tac-toe {
   background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #76a8d1ad, #31d131a9);
 }
 
-.tac-tac-toe {
-  /* background-image: url('../images/tictactoe.png'); */
+.tictactoe-title{
+  color: white;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  font-family: 'Grandstander', cursive;
+  cursor: pointer;
+  font-size: clamp(28px, 8vmin, 60px);
+  padding: 1vw;
+}
+
+.tictactoe-title:hover {
+  box-shadow: 0 0 aliceblue;
+  border-radius: 52px;
+  scale: 1.1;
+  text-decoration: line-through black;
+  transition: 0.4s ease;
 }
 
 .tictac-underlay {
   width: 25vw;
   display: inline-block;
   margin-left: 62%;
+}
+
+.column-ttt {
+  width: 28%;
+}
+
+.ttt-screen {
+  width: clamp(55px, 9vmin, 130px);
+}
+
+.container-ttt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.landscape-ttt {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.port-ttt {
+  width: 20%
+}
+
+.land-ttt {
+  width: 35%;
+}
+
+.container-ttt {
+  display: flex;
 }
 
 .stage {

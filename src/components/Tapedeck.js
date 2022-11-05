@@ -13,7 +13,7 @@ const Tapedeck = () => {
     return (
         <Box projectClass={'tapedeck-card'} project={'Tapedeck'}>
             <img className='tape' src={Tape} alt='picture of an analogue tape'></img>
-            <div className='project-underlay'>
+            <div className='project-underlay see-through'>
                 <div className='td-container'>
                     <div className='screen td-screen screenshot-connectfour row'>
                         <img className='tapedeck-logo' onClick={() => _handleOnClick()} src={Tapedecklogo} alt='tapedeck four'></img>
