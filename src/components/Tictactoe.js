@@ -20,10 +20,10 @@ const Tictactoe = () => {
                     </div>
                     <div className='screenshot-container'>
                         <div className='column-ttt port-ttt'>
-                            <img className='ttt-screen connectfour-img' src={Tictactoe1} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img' src={Tictactoe3} alt='Screenshot of Tictactoe'></img>
                         </div>
                         <div className='column-ttt port-ttt'>
-                            <img className='ttt-screen connectfour-img' src={Tictactoe3} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img' src={Tictactoe1} alt='Screenshot of Tictactoe'></img>
                         </div>
                         <div className='column-ttt land-ttt'>
                             <img className='ttt-screen connectfour-img landscape-ttt' src={Tictactoe2} alt='Screenshot of Tictactoe'></img>
