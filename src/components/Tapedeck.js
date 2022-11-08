@@ -12,7 +12,7 @@ const Tapedeck = () => {
 
     return (
         <Box projectClass={'tapedeck-card'} project={'Tapedeck'}>
-            <img className='tape' src={Tape} alt='picture of an analogue tape'></img>
+            <img className='tape' src={Tape} alt='an analogue tape'></img>
             <div className='project-underlay see-through'>
                 <div className='td-container'>
                     <div className='screen td-screen screenshot-connectfour row'>

@@ -82,7 +82,6 @@ const navbarTheme = () => {
   navbarTheme()
 }, [scrollPosition]);
 
-  const svgClass = "bot-svg";
   return (
     <>
     <div>

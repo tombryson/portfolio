@@ -2,7 +2,6 @@ import Box from './Box.js'
 import Burningairlines from '../images/burning-airlines.jpg';
 import BurningairlinesSeats from '../images/burning-airlines-seat-map.png'
 import BurningairlinesFlights from '../images/burning-airlines-flights.png';
-import FireIcon from '../images/fire-icon-png.png';
 
 const Burning = () => {
     const _handleOnClick = (e) => {

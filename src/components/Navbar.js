@@ -17,7 +17,6 @@ import {
   MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
-const _ = require('lodash');
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);

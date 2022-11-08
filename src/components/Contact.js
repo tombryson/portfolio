@@ -1,6 +1,7 @@
 const Contact = () => {
   const _onClick = (props) => {
     if (props === "email") {
+      // eslint-disable-next-line no-useless-concat
       window.location.assign("mail"+'to:thomas.bryson'+'@'+'outlook'+'.'+'com')
     }
     else if (props === "github") {

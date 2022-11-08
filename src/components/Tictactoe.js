@@ -1,11 +1,9 @@
 import Box from './Box.js'
-import Tictac from '../images/tictactoe.png';
 import Tictactoe1 from '../images/Tictactoe-1.jpg';
 import Tictactoe2 from '../images/Tictactoe-2.jpg';
 import Tictactoe3 from '../images/Tictactoe-3.jpg';
 
 const Tictactoe = () => {
-
     const _handleOnClick = (e) => {
         e.preventDefault();
         window.open('https://tombryson.github.io/TicTacToe/','_blank').focus();
