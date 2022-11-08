@@ -82,6 +82,7 @@ const navbarTheme = () => {
   navbarTheme()
 }, [scrollPosition]);
 
+  const svgClass = "bot-svg";
   return (
     <>
     <div>
@@ -138,35 +139,36 @@ const navbarTheme = () => {
           </div>
         </div>
         <div className='skills stage'>
-          <div className='skill-box'>
+          <div className='skill-box' id="html" >
             <img src={Skill1} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="js">
             <img src={Skill2} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="css3">
             <img src={Skill3} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="node">
             <img src={Skill4} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="postgres">
             <img src={Skill5} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="rails">
             <img src={Skill6} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="react">
             <img src={Skill7} alt="a skill"></img>
           </div>
-          <div className='skill-box'>
+          <div className='skill-box' id="ruby">
             <img src={Skill8} alt="a skill"></img>
           </div>
         </div>
       </div>
+      <svg className="bot-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#76a8d1" fill-opacity="1" d="M0,96L80,112C160,128,320,160,480,170.7C640,181,800,171,960,186.7C1120,203,1280,245,1360,266.7L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
     </div>
-    <Contact />
   </div>
+  <Contact />
 </>
   );
 }
