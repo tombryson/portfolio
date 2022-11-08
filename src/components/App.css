@@ -275,6 +275,11 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   margin: 0px -16px -8px -17px;
 }
 
+a.nav-link:hover {
+  color: #904eff!important;
+  transition: 0.1s all!important;
+}
+
 .welcome {
   margin-top: 1rem;
   font-size: clamp(58px, 4vw, 4vw);
@@ -434,6 +439,10 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 }
 
+.cyan {
+  background: lightcyan;
+}
+
 .project-overlay {
   height: 45vh;
   min-height: 240px;
@@ -524,6 +533,10 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   border-radius: 67% 120% 62% 88% / 155% 144% 33% 41%;
 }
 
+.cache {
+  background: url(../images/top-background-dark.gif) no-repeat;
+  background-size: 1px;
+}
 
 .project {
   padding-top: 15vh;
@@ -751,10 +764,6 @@ div.tapedeck {
   padding: 2vw;
 }
 
-.no-padding {
-  padding: 0px;
-}
-
 div.tic-tac-toe {
   background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #76a8d1ad, #31d131a9);
 }
@@ -766,7 +775,7 @@ div.tic-tac-toe {
   display: inline-block;
   font-family: 'Grandstander', cursive;
   cursor: pointer;
-  font-size: clamp(28px, 8vmin, 60px);
+  font-size: clamp(28px, 9vmin, 60px);
   padding: 1vw;
 }
 
@@ -818,39 +827,81 @@ div.tic-tac-toe {
   display: flex;
 }
 
+.no-padding {
+  padding: 0px;
+  background-image: conic-gradient(#ffffff 25%, transparent 38%, #76a8d1, black 105%);
+  transform: scaleX(1.2);
+  background-size: 132% 100%;
+}
+
 .stage {
+  background: url("../images/code-scroll.gif");
   display: flex;
   background-position: center;
   background-color: white;
-  border: 0px black;
-  background: url("../images/code-scroll.gif");
+  border: 100px black!important;
   flex-direction: row;
   align-items: center;
   border-radius: 16px;
   border: 40vw;
   flex-wrap: nowrap;
   color: #ffffff;
-  padding: 40px;
+  padding: 60px;
+  pointer-events: none;
+  background-position: top;
+  box-shadow: inset 7px 12px 20px 8px #000000de;
+  transform: scaleX(0.8);
+}
+
+.no-padding svg {
+  transform: translateY(-4px);
+  width: 100%;
 }
 
 .my-skills {
-  border: none;
-  margin-bottom: 0px;
+  border-radius: 83% 234% 78%;
+  margin-bottom: 0px!important;
+  border: solid #2d2b28 3px;
+  transform: translateY(4.8vh);
+  max-width: 45%;
+  filter: blur(2px);
 }
 
 .arrow-bot {
   margin-left: 4vw;
   overflow: hidden;
-  width: 90%;
+  margin-bottom: -80px;
+  filter: contrast(0.6) blur(1px);
 }
 
 .skill-box {
   width: 13%;
-  transition: transform .5s ease;
+  transition: all .4s ease;
   animation-fill-mode: both;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.text-box svg {
+  transform: rotate(270deg) translate3d(calc(37vmax - 160px), 15.9vw, 0) scaleX(1.1);
+  overflow: visible!important;
+  filter: opacity(0.85) drop-shadow(40px -54px 6px #121212c5);
 }
 
 .skill-box:hover {
   animation: rotate;
   transform: rotate3d(1, 0, 4, 360deg);
+  animation-fill-mode: both;
+}
+
+.skills:hover .skill-box:not(:hover) {
+  opacity: 50%;
+  scale: 0.8;
+  padding: 5px;
+  filter: blur(8px);
+}
+
+.contact {
+  width: 100vw;;
+  height: 100vh;
 }

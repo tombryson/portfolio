@@ -4,6 +4,7 @@ import Tapedeck from './Tapedeck.js';
 import Tictactoe from './Tictactoe.js';
 import Connect4 from './Connect4.js';
 import Burning from './Burning.js';
+import Contact from './Contact.js';
 import Arrow from '../images/arrow.png';
 import Skill1 from '../images/skills/html5-original.svg';
 import Skill2 from '../images/skills/javascript-original.svg';
@@ -14,6 +15,7 @@ import Skill6 from '../images/skills/rails-original-wordmark.svg';
 import Skill7 from '../images/skills/react-original.svg';
 import Skill8 from '../images/skills/ruby-original.svg';
 import Arrow2 from '../images/arrow-2.png';
+import Pencil from '../images/pencil.jsx';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -87,8 +89,9 @@ const navbarTheme = () => {
         <div className='content-top'>
             <h1 id='top'>
               <div className='name'>TOM BRYSON: <span className='full'>FULL</span> STACK<span className='web'>WEB</span><br></br>DEVELOPER
-              </div> 
+              </div>
             </h1>
+            <div className='cache'></div>
           </div>
         </div>
       </div>
@@ -96,7 +99,7 @@ const navbarTheme = () => {
       <div class="container">
         <div class="row">
           <div className='text-box box-1'>
-          <h1 className='welcome spartan'>Welcome</h1>
+            <h1 className='welcome spartan'>Welcome</h1>
           </div>
           <div className='text-box box-2'>
             <p className='my-name spartan'>My name is Tom Bryson, a Full-stack developer based in Melbourne.</p>
@@ -107,32 +110,31 @@ const navbarTheme = () => {
           </div>
        </div>
     </div>
-    <div>
-    </div>
-    </div>
+  </div>
     <div className='projects'>
       <div className='burning-airlines project'>
-      <Burning />
+        <Burning />
       </div>
       <div className='connect-four project'>
-      <Connect4 />
+        <Connect4 />
       </div>
       <div className='tapedeck project'>
-      <Tapedeck />
+        <Tapedeck />
       </div>
-      <div className='tic-tac-toe project'>
-      <Tictactoe />
+        <div className='tic-tac-toe project'>
+        <Tictactoe />
       </div>
-      <div className='project no-padding'>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <div className='project no-padding cyan'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1440 320">
           <path fill="#76a8d1" fill-opacity="1" d="M0,192L21.8,165.3C43.6,139,87,85,131,58.7C174.5,32,218,32,262,58.7C305.5,85,349,139,393,170.7C436.4,203,480,213,524,202.7C567.3,192,611,160,655,138.7C698.2,117,742,107,785,90.7C829.1,75,873,53,916,69.3C960,85,1004,139,1047,149.3C1090.9,160,1135,128,1178,128C1221.8,128,1265,160,1309,186.7C1352.7,213,1396,235,1418,245.3L1440,256L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z">
-                    </path>
+          </path>
         </svg>
       <div class="container">
         <div class="row">
           <div className='text-box box-1'>
-            <h1 className='welcome spartan my-skills'>My Skills...</h1>
-            <img src={Arrow2} alt="an arrow arrow-bot"></img>
+            <h1 className='welcome spartan my-skills'>My Skills</h1>
+              <Pencil />
+            <img className="arrow-bot" src={Arrow2} alt="an arrow"></img>
           </div>
         </div>
         <div className='skills stage'>
@@ -163,9 +165,7 @@ const navbarTheme = () => {
         </div>
       </div>
     </div>
-    <div className='projects'>
-      <h1>Contact</h1>
-    </div>
+    <Contact />
   </div>
 </>
   );
