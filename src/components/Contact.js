@@ -12,7 +12,7 @@ const Contact = () => {
     else if (props === 'resume') {
       window.open("https://drive.google.com/file/d/1fC4-D4g2GvGOKELNBkk7UitHeD45S7Qa/view?usp=sharing", "_blank").focus();
     }
-    }
+  }
 
   return (
     <div className='contact'>
