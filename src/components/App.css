@@ -57,6 +57,7 @@ h1 > .name {
   background: url(../images/top-background-light.gif) center no-repeat;
   background-position: left;
   transition: 1s all;
+  -moz-transition: all 1s;
   animation-fill-mode: forwards;
   animation-play-state: running;
 }
@@ -69,13 +70,13 @@ h1 > .name {
   background: url(../images/top-background-dark.gif) center no-repeat;
   background-position: left;
   transition: 2s ease;
+  -moz-transition: all 2s;
   animation-fill-mode: forwards;
   animation-play-state: running;
 }
 
 #top-background-light {
   opacity: 75%;
-  /* position: absolute; */
 }
 
 #top-background-dark {
@@ -92,6 +93,7 @@ h1 > .name {
   height: 100%;
   width: 100%;
   transition: 1s all;
+  -moz-transition: all 1s;
   display: table;
   position: relative;
   background-size: cover;
@@ -107,6 +109,7 @@ h1 > .name {
   left: 0;
   z-index: 0;
   transition: all 0.6s ease!important;
+  -moz-transition: all 1s;
 }
 
 .background-pattern {
@@ -122,6 +125,7 @@ h1 > .name {
   display: flex;
   align-items: center;
   transition: all 0.6s ease!important;
+  -moz-transition: all 1s;
 }
 
 .hello {
@@ -170,6 +174,7 @@ h1 > .name {
   text-transform: uppercase;
   width: 13%;
   transition: all 1.2s cubic-bezier(0.25, 0.17, 0.3, 0.73);
+  -moz-transition: all 1s;
   background-image: #ffffff00;
   border-radius: 50px;
 }
@@ -879,7 +884,7 @@ div.tic-tac-toe {
 }
 
 .my-skills:hover {
-  background-color: aliceblue;
+  background-color: #f0f8ffd1;
 }
 
 .arrow-bot {

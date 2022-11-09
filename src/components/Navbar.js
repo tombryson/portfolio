@@ -25,11 +25,11 @@ export default function App() {
   const modeSwap = () => {
     const waterfall = document.getElementsByClassName('background-overlay');
     if (style === 'light') {
-      waterfall[0].classList.add("background-dark");
+      waterfall[0].classList.toggle("background-dark");
       setStyle('dark')
     } else
     if (style === 'dark') {
-      waterfall[0].classList.remove('background-dark');
+      waterfall[0].classList.toggle('background-dark');
       setStyle('light')
     }
   }
@@ -77,7 +77,8 @@ export default function App() {
                   <MDBDropdownItem link><li><Link activeClass="active" to="connect-four" spy={true} smooth={false}>Connect Four</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="tapedeck" spy={true} smooth={false}>Tapedeck</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="tic-tac-toe" spy={true} smooth={false}>Tic Tac Toe</Link></li></MDBDropdownItem>
-                  <MDBDropdownItem link><li><Link activeClass="active" to="my-skills" spy={true} smooth={false}>Skills</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="my-skills" spy={true} smooth={false}>My Skills</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="contact" spy={true} smooth={false}>Contact Me</Link></li></MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
