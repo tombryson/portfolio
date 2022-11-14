@@ -17,7 +17,6 @@ import {
   MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
-const _ = require('lodash');
 
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
@@ -26,13 +25,18 @@ export default function App() {
   const modeSwap = () => {
     const waterfall = document.getElementsByClassName('background-overlay');
     if (style === 'light') {
-      waterfall[0].classList.add("background-dark");
+      waterfall[0].classList.toggle("background-dark");
       setStyle('dark')
     } else
     if (style === 'dark') {
-      waterfall[0].classList.remove('background-dark');
+      waterfall[0].classList.toggle('background-dark');
       setStyle('light')
     }
+  }
+
+  const _handleOnClick = () => {
+    // e.preventDefault();
+    window.open('https://www.linkedin.com/in/tom-bryson','_blank').focus();
   }
 
 
@@ -59,7 +63,7 @@ export default function App() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#'>LinkedIn</MDBNavbarLink>
+              <MDBNavbarLink  href='#' onClick={() => _handleOnClick()}>LinkedIn</MDBNavbarLink>
             </MDBNavbarItem>
 
             <MDBNavbarItem>
@@ -73,6 +77,8 @@ export default function App() {
                   <MDBDropdownItem link><li><Link activeClass="active" to="connect-four" spy={true} smooth={false}>Connect Four</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="tapedeck" spy={true} smooth={false}>Tapedeck</Link></li></MDBDropdownItem>
                   <MDBDropdownItem link><li><Link activeClass="active" to="tic-tac-toe" spy={true} smooth={false}>Tic Tac Toe</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="my-skills" spy={true} smooth={false}>My Skills</Link></li></MDBDropdownItem>
+                  <MDBDropdownItem link><li><Link activeClass="active" to="contact" spy={true} smooth={false}>Contact Me</Link></li></MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavbarItem>
