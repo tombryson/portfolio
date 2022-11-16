@@ -1013,6 +1013,7 @@ div.tic-tac-toe {
   justify-content: space-evenly;
   filter: drop-shadow(2px 3px 6px black);
   transition: 1s all ease;
+  align-items: baseline;
 }
 
 .black svg {
