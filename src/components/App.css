@@ -282,7 +282,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 
 a.nav-link:hover {
-  color: #904eff!important;
+  color: #597cd6!important;
   transition: 0.1s all!important;
 }
 
