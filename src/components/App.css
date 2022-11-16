@@ -1000,11 +1000,10 @@ div.tic-tac-toe {
 .black {
   text-align: center;
   border: solid black;
-  padding: 20px;
   width: 46vw;
   font-size: calc(18px + 0.4rem);
   display: flex;
-  padding: 62px;
+  padding: 54px 68px 68px 68px;
   border-radius: 102px;
   align-content: space-between;
   flex-wrap: wrap;
