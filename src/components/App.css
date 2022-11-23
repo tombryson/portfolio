@@ -607,10 +607,8 @@ img.burning:hover {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
-  width: 30vh!important;
-  width: calc(15vh + 12vw)!important;
+  width: fit-content!important;
+  max-height: 800px;
 }
 
 #caption, #caption-c4 {
@@ -651,9 +649,9 @@ img.burning:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1400px){
   .modal-content {
-    width: 95%;
+    max-width: 95%!important;
   }
 }
 
