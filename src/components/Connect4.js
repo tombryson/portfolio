@@ -8,6 +8,20 @@ const Connect4 = () => {
         window.open('https://shrenekt-four.netlify.app/','_blank').focus();
     }
 
+    const modalOnClick = (e) => {
+        let img = e.target
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("img01");
+        const captionText = document.getElementById("caption-c4");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        const span = document.getElementsByClassName("close")[1];
+        span.onclick = () => {
+            modal.style.display = "none";
+        }
+    }
+
     return (
         <Box projectClass={'connect-four-card'} project={'Connect Four'}>
             <div className='project-underlay'>
@@ -15,12 +29,17 @@ const Connect4 = () => {
                     <div className='row-1 row'>
                         <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='shrenekt four'></img>
                     </div>
+                    <div id="modal" className='modal'>
+                        <span class="close">&times;</span>
+                        <img className="modal-content" id="img01"></img>
+                         <div id="caption-c4"></div>
+                    </div>
                     <div className='screenshot-container'>
                         <div className='screen cf-column screenshot-connectfour'>
-                            <img className='connectfour-img' src={Screenshot1} alt='Screenshot of connectfour'></img>
+                            <img className='connectfour-img' id="myImg" src={Screenshot1} onClick={(e) => modalOnClick(e)} alt='Screenshot of connectfour'></img>
                         </div>
                         <div className='screen cf-column screenshot-connectfour'>
-                            <img className='connectfour-img landscape' src={Screenshot2} alt='Screenshot of connectfour'></img>
+                            <img className='connectfour-img landscape' id="myImg" src={Screenshot2} onClick={(e) => modalOnClick(e)} alt='Screenshot of connectfour'></img>
                         </div>
                     </div>
                 </div>

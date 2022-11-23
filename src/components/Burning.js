@@ -3,27 +3,28 @@ import Box from './Box.js'
 import Burningairlines from '../images/burning-airlines.jpg';
 import BurningairlinesSeats from '../images/burning-airlines-seat-map.png'
 import BurningairlinesFlights from '../images/burning-airlines-flights.png';
-import Modals from './Modals.jsx'
 
 const Burning = () => {
+    const [imgSrc, setImgSrc] = useState("")
+    const [isShown, setIsShown] = useState(false);
     const _handleOnClick = (e) => {
         e.preventDefault();
         window.open('https://burning-airlines-177.herokuapp.com/','_blank').focus();
     }
 
-const modalOnClick = (e) => {
-    let img = e.target
-    const modal = document.getElementById("myModal");
-    const modalImg = document.getElementById("img01");
-    const captionText = document.getElementById("caption");
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    captionText.innerHTML = img.alt;
-    const span = document.getElementsByClassName("close")[0];
-    span.onclick = () => {
-        modal.style.display = "none";
+    const modalOnClick = (e) => {
+        let img = e.target
+        const modal = document.getElementById("burningModal");
+        const modalImg = document.getElementById("img02");
+        const captionText = document.getElementById("caption");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        const span = document.getElementsByClassName("close")[0];
+        span.onclick = () => {
+            modal.style.display = "none";
+        }
     }
-}
 
     return (
         <Box projectClass={'burning-airlines-card'} project={'Burning Airlines'}>
@@ -31,14 +32,14 @@ const modalOnClick = (e) => {
                 <div className='img-container'>
                     <div className='column-2 column screenshot screenshot-burning'>
                         <img className='seat-map-img' id="myImg" 
-                        // onClick={(e) => modalOnClick(e)} 
-                        onclick={(e) => <Modals refs={e}></Modals>}
-                        src={BurningairlinesSeats} 
-                        alt='pictures of seats'></img>
+                            onClick={(e) => modalOnClick(e)} 
+                            src={BurningairlinesSeats} 
+                            alt='pictures of seats'>
+                        </img>
                     </div>
-                    <div id="myModal" className='modal'>
+                    <div id="burningModal" className='modal'>
                         <span class="close">&times;</span>
-                        <img className="modal-content" id="img01"></img>
+                        <img className="modal-content" id="img02"></img>
                          <div id="caption"></div>
                     </div>
                     <div className='column-1 column screenshot screenshot-burning'>
