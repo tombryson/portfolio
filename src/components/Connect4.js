@@ -27,7 +27,7 @@ const Connect4 = () => {
             <div className='project-underlay'>
                 <div className='cf-container'>
                     <div className='row-1 row'>
-                        <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='shrenekt four'></img>
+                        <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='Shrenekt four'></img>
                     </div>
                     <div id="modal" className='modal'>
                         <span class="close">&times;</span>
@@ -36,10 +36,10 @@ const Connect4 = () => {
                     </div>
                     <div className='screenshot-container'>
                         <div className='screen cf-column screenshot-connectfour'>
-                            <img className='connectfour-img' id="myImg" src={Screenshot1} onClick={(e) => modalOnClick(e)} alt='Screenshot of connectfour'></img>
+                            <img className='connectfour-img' id="myImg" src={Screenshot1} onClick={(e) => modalOnClick(e)} alt='Shrenekt four'></img>
                         </div>
                         <div className='screen cf-column screenshot-connectfour'>
-                            <img className='connectfour-img landscape' id="myImg" src={Screenshot2} onClick={(e) => modalOnClick(e)} alt='Screenshot of connectfour'></img>
+                            <img className='connectfour-img landscape' id="myImg" src={Screenshot2} onClick={(e) => modalOnClick(e)} alt='Shrenekt four'></img>
                         </div>
                     </div>
                 </div>

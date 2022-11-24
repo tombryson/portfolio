@@ -9,22 +9,41 @@ const Tictactoe = () => {
         window.open('https://tombryson.github.io/TicTacToe/','_blank').focus();
     }
 
+    const modalOnClick = (e) => {
+        let img = e.target
+        const modal = document.getElementById("TicTacModal");
+        const modalImg = document.getElementById("img03");
+        const captionText = document.getElementById("caption-tt");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        const span = document.getElementsByClassName("close")[3];
+        span.onclick = () => {
+            modal.style.display = "none";
+        }
+    }
+
     return (
         <Box projectClass={'tictactoe-card'} project={'tictactoe'}>
             <div className='project-underlay'>
                 <div className='img-container container-ttt'>
                     <div className=''>
-                        <h1 className='tictactoe-title' onClick={(e) => _handleOnClick(e)} alt='logo of a plane'>Tic Tac Toe</h1>
+                        <h1 className='tictactoe-title' onClick={(e) => _handleOnClick(e)} alt='tic tac toe'>Tic Tac Toe</h1>
                     </div>
                     <div className='screenshot-container'>
                         <div className='column-ttt port-ttt'>
-                            <img className='ttt-screen connectfour-img' src={Tictactoe3} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe3} alt='Screenshot of Tictactoe'></img>
+                        </div>
+                        <div id="TicTacModal" className='modal'>
+                            <span class="close">&times;</span>
+                            <img className="modal-content" id="img03"></img>
+                                <div id="caption-tt"></div>
                         </div>
                         <div className='column-ttt port-ttt'>
-                            <img className='ttt-screen connectfour-img' src={Tictactoe1} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe1} alt='Screenshot of Tictactoe'></img>
                         </div>
                         <div className='column-ttt land-ttt'>
-                            <img className='ttt-screen connectfour-img landscape-ttt' src={Tictactoe2} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img landscape-ttt' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe2} alt='Screenshot of Tictactoe'></img>
                         </div>
                    </div>
                 </div>

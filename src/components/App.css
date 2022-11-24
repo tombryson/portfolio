@@ -611,7 +611,7 @@ img.burning:hover {
   max-height: 800px;
 }
 
-#caption, #caption-c4 {
+#caption, #caption-c4, #caption-td, #caption-tt {
   margin: auto;
   display: block;
   width: 80%;
@@ -965,6 +965,8 @@ div.tic-tac-toe {
   animation-fill-mode: both;
   pointer-events: auto;
   cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
 }
 
 .text-box svg {
@@ -1084,7 +1086,8 @@ div.tic-tac-toe {
 
 .black svg:hover {
   cursor: pointer;
-  background: radial-gradient(#3570ffd4 30%, transparent 60%);
+  background: radial-gradient(#74a6d1e0 30%, transparent 67%, transparent 50%);
+  transform: matrix3d(1, 0, 1.1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, -1.5, 1, 1);
 }
 
 .black:hover {

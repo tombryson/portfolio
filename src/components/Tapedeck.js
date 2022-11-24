@@ -10,6 +10,20 @@ const Tapedeck = () => {
         window.open('https://tapedeck-app.herokuapp.com/','_blank').focus();
     }
 
+    const modalOnClick = (e) => {
+        let img = e.target
+        const modal = document.getElementById("TapedeckModal");
+        const modalImg = document.getElementById("img01");
+        const captionText = document.getElementById("caption-td");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        const span = document.getElementsByClassName("close")[2];
+        span.onclick = () => {
+            modal.style.display = "none";
+        }
+    }
+
     return (
         <Box projectClass={'tapedeck-card'} project={'Tapedeck'}>
             <img className='tape' src={Tape} alt='an analogue tape'></img>
@@ -21,10 +35,15 @@ const Tapedeck = () => {
                 </div>
                 <div className='screenshot-container td-screencontainer'>
                     <div className='screen td-screen screenshot-connectfour'>
-                        <img className='connectfour-img' src={Screenshot1} alt='Screenshot of Tapedeck'></img>
+                        <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot1} alt='Screenshot of Tapedeck'></img>
+                    </div>
+                    <div id="TapedeckModal" className='modal'>
+                        <span class="close">&times;</span>
+                        <img className="modal-content" id="img01"></img>
+                         <div id="caption-td"></div>
                     </div>
                     <div className='screen td-screen screenshot-connectfour'>
-                        <img className='connectfour-img' src={Screenshot2} alt='Screenshot of Tapedeck'></img>
+                        <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot2} alt='Screenshot of Tapedeck'></img>
                     </div>
                 </div>
             </div>
