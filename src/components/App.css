@@ -607,8 +607,8 @@ img.burning:hover {
 .modal-content {
   margin: auto;
   display: block;
+  max-height: 80vh;
   width: fit-content!important;
-  max-height: 800px;
 }
 
 #caption, #caption-c4, #caption-td, #caption-tt {
@@ -965,7 +965,7 @@ div.tic-tac-toe {
   animation-fill-mode: both;
   pointer-events: auto;
   cursor: pointer;
-  padding: 2px;
+  padding: 10px;
   border-radius: 50%;
 }
 

@@ -13,7 +13,7 @@ const Tapedeck = () => {
     const modalOnClick = (e) => {
         let img = e.target
         const modal = document.getElementById("TapedeckModal");
-        const modalImg = document.getElementById("img01");
+        const modalImg = document.getElementById("img03");
         const captionText = document.getElementById("caption-td");
         modal.style.display = "block";
         modalImg.src = img.src;
@@ -39,7 +39,7 @@ const Tapedeck = () => {
                     </div>
                     <div id="TapedeckModal" className='modal'>
                         <span class="close">&times;</span>
-                        <img className="modal-content" id="img01"></img>
+                        <img className="modal-content" id="img03" alt="modal content"></img>
                          <div id="caption-td"></div>
                     </div>
                     <div className='screen td-screen screenshot-connectfour'>

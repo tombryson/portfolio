@@ -5,8 +5,6 @@ import BurningairlinesSeats from '../images/burning-airlines-seat-map.png'
 import BurningairlinesFlights from '../images/burning-airlines-flights.png';
 
 const Burning = () => {
-    const [imgSrc, setImgSrc] = useState("")
-    const [isShown, setIsShown] = useState(false);
     const _handleOnClick = (e) => {
         e.preventDefault();
         window.open('https://burning-airlines-177.herokuapp.com/','_blank').focus();
@@ -34,12 +32,12 @@ const Burning = () => {
                         <img className='seat-map-img' id="myImg" 
                             onClick={(e) => modalOnClick(e)} 
                             src={BurningairlinesSeats} 
-                            alt='pictures of seats'>
+                            alt='Seat selection page'>
                         </img>
                     </div>
                     <div id="burningModal" className='modal'>
                         <span class="close">&times;</span>
-                        <img className="modal-content" id="img02"></img>
+                        <img className="modal-content" id="img02" alt="modal content"></img>
                          <div id="caption"></div>
                     </div>
                     <div className='column-1 column screenshot screenshot-burning'>

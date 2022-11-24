@@ -12,7 +12,7 @@ const Tictactoe = () => {
     const modalOnClick = (e) => {
         let img = e.target
         const modal = document.getElementById("TicTacModal");
-        const modalImg = document.getElementById("img03");
+        const modalImg = document.getElementById("img04");
         const captionText = document.getElementById("caption-tt");
         modal.style.display = "block";
         modalImg.src = img.src;
@@ -36,7 +36,7 @@ const Tictactoe = () => {
                         </div>
                         <div id="TicTacModal" className='modal'>
                             <span class="close">&times;</span>
-                            <img className="modal-content" id="img03"></img>
+                            <img className="modal-content" id="img04" alt="modal content"></img>
                                 <div id="caption-tt"></div>
                         </div>
                         <div className='column-ttt port-ttt'>

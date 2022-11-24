@@ -31,7 +31,7 @@ const Connect4 = () => {
                     </div>
                     <div id="modal" className='modal'>
                         <span class="close">&times;</span>
-                        <img className="modal-content" id="img01"></img>
+                        <img className="modal-content" id="img01" alt="modal content"></img>
                          <div id="caption-c4"></div>
                     </div>
                     <div className='screenshot-container'>
