@@ -17,8 +17,7 @@ const Tictactoe = () => {
         modal.style.display = "block";
         modalImg.src = img.src;
         captionText.innerHTML = img.alt;
-        const span = document.getElementsByClassName("close")[3];
-        span.onclick = () => {
+        modal.onclick = () => {
             modal.style.display = "none";
         }
     }
@@ -32,7 +31,7 @@ const Tictactoe = () => {
                     </div>
                     <div className='screenshot-container'>
                         <div className='column-ttt port-ttt'>
-                            <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe3} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe3} alt='Winning Screen'></img>
                         </div>
                         <div id="TicTacModal" className='modal'>
                             <span class="close">&times;</span>
@@ -40,10 +39,10 @@ const Tictactoe = () => {
                                 <div id="caption-tt"></div>
                         </div>
                         <div className='column-ttt port-ttt'>
-                            <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe1} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe1} alt='TicTacToe Mobile'></img>
                         </div>
                         <div className='column-ttt land-ttt'>
-                            <img className='ttt-screen connectfour-img landscape-ttt' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe2} alt='Screenshot of Tictactoe'></img>
+                            <img className='ttt-screen connectfour-img landscape-ttt' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe2} alt='TicTacToe Landscape'></img>
                         </div>
                    </div>
                 </div>

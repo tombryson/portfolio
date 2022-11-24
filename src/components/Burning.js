@@ -12,13 +12,12 @@ const Burning = () => {
     const modalOnClick = (e) => {
         let img = e.target
         const modal = document.getElementById("burningModal");
-        const modalImg = document.getElementById("img02");
+        const modalImg = document.getElementById("img01");
         const captionText = document.getElementById("caption");
         modal.style.display = "block";
         modalImg.src = img.src;
         captionText.innerHTML = img.alt;
-        const span = document.getElementsByClassName("close")[0];
-        span.onclick = () => {
+        modal.onclick = () => {
             modal.style.display = "none";
         }
     }
@@ -31,16 +30,16 @@ const Burning = () => {
                         <img className='seat-map-img' id="myImg" 
                             onClick={(e) => modalOnClick(e)} 
                             src={BurningairlinesSeats} 
-                            alt='Seat selection page'>
+                            alt='Choosing a seat'>
                         </img>
                     </div>
                     <div id="burningModal" className='modal'>
                         <span class="close">&times;</span>
-                        <img className="modal-content" id="img02" alt="modal content"></img>
+                        <img className="modal-content" id="img01" alt="modal content"></img>
                          <div id="caption"></div>
                     </div>
                     <div className='column-1 column screenshot screenshot-burning'>
-                        <img className='burning-search' id="myImg" onClick={(e) => modalOnClick(e)} src={BurningairlinesFlights} alt='flight log on app'></img>
+                        <img className='burning-search' id="myImg" onClick={(e) => modalOnClick(e)} src={BurningairlinesFlights} alt='Searching for a flight'></img>
                     </div>
                     <div className='column-3 img-logo column'>
                         <img className='burning' onClick={(e) => _handleOnClick(e)} src={Burningairlines} alt='logo of a plane'></img>

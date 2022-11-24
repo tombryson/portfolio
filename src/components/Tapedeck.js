@@ -18,8 +18,7 @@ const Tapedeck = () => {
         modal.style.display = "block";
         modalImg.src = img.src;
         captionText.innerHTML = img.alt;
-        const span = document.getElementsByClassName("close")[2];
-        span.onclick = () => {
+        modal.onclick = () => {
             modal.style.display = "none";
         }
     }
@@ -35,7 +34,7 @@ const Tapedeck = () => {
                 </div>
                 <div className='screenshot-container td-screencontainer'>
                     <div className='screen td-screen screenshot-connectfour'>
-                        <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot1} alt='Screenshot of Tapedeck'></img>
+                        <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot1} alt='Home/Community Page'></img>
                     </div>
                     <div id="TapedeckModal" className='modal'>
                         <span class="close">&times;</span>
@@ -43,7 +42,7 @@ const Tapedeck = () => {
                          <div id="caption-td"></div>
                     </div>
                     <div className='screen td-screen screenshot-connectfour'>
-                        <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot2} alt='Screenshot of Tapedeck'></img>
+                        <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot2} alt="Selection: Best Hits of the 80's"></img>
                     </div>
                 </div>
             </div>

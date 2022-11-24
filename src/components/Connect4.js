@@ -11,13 +11,14 @@ const Connect4 = () => {
     const modalOnClick = (e) => {
         let img = e.target
         const modal = document.getElementById("modal");
-        const modalImg = document.getElementById("img01");
+        const modalContent = document.getElementsByClassName("modal-content")[1];
+        console.log(modalContent)
+        const modalImg = document.getElementById("img02");
         const captionText = document.getElementById("caption-c4");
         modal.style.display = "block";
         modalImg.src = img.src;
         captionText.innerHTML = img.alt;
-        const span = document.getElementsByClassName("close")[1];
-        span.onclick = () => {
+        modalContent.onclick = () => {
             modal.style.display = "none";
         }
     }
@@ -27,19 +28,19 @@ const Connect4 = () => {
             <div className='project-underlay'>
                 <div className='cf-container'>
                     <div className='row-1 row'>
-                        <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='Shrenekt four'></img>
+                        <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='Shrenekt Four Logo'></img>
                     </div>
                     <div id="modal" className='modal'>
                         <span class="close">&times;</span>
-                        <img className="modal-content" id="img01" alt="modal content"></img>
+                        <img className="modal-content" id="img02" alt="modal content"></img>
                          <div id="caption-c4"></div>
                     </div>
                     <div className='screenshot-container'>
                         <div className='screen cf-column screenshot-connectfour'>
-                            <img className='connectfour-img' id="myImg" src={Screenshot1} onClick={(e) => modalOnClick(e)} alt='Shrenekt four'></img>
+                            <img className='connectfour-img' id="myImg" src={Screenshot1} onClick={(e) => modalOnClick(e)} alt='Shrenekt Four for Mobile'></img>
                         </div>
                         <div className='screen cf-column screenshot-connectfour'>
-                            <img className='connectfour-img landscape' id="myImg" src={Screenshot2} onClick={(e) => modalOnClick(e)} alt='Shrenekt four'></img>
+                            <img className='connectfour-img landscape' id="myImg" src={Screenshot2} onClick={(e) => modalOnClick(e)} alt='Shrenekt Four Landscape'></img>
                         </div>
                     </div>
                 </div>
