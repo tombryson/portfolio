@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Box from './Box.js'
 import Burningairlines from '../images/burning-airlines.jpg';
 import BurningairlinesSeats from '../images/burning-airlines-seat-map.png'
