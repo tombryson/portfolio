@@ -47,9 +47,9 @@ const Connect4 = () => {
             </div>
             <div className={`project-overlay connect-four-card`}>
                 <div>
-                    <h1 className='spartan shrek-title'>
+                    <h2 className='spartan shrek-title'>
                     Connect Four
-                    </h1>
+                    </h2>
                     </div>
                     <div className='connect4-box'>
                         <ul>

@@ -35,7 +35,6 @@ export default function App() {
   }
 
   const _handleOnClick = () => {
-    // e.preventDefault();
     window.open('https://www.linkedin.com/in/tom-bryson','_blank').focus();
   }
 

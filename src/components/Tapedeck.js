@@ -25,7 +25,9 @@ const Tapedeck = () => {
 
     return (
         <Box projectClass={'tapedeck-card'} project={'Tapedeck'}>
-            <img className='tape' src={Tape} alt='an analogue tape'></img>
+            <div className='tape-container'>
+                <img className='tape' src={Tape} alt='an analogue tape'></img>
+            </div>
             <div className='project-underlay see-through'>
                 <div className='td-container'>
                     <div className='screen td-screen screenshot-connectfour row'>
@@ -47,14 +49,14 @@ const Tapedeck = () => {
                 </div>
             </div>
             <div className='project-overlay tapedeck-card'>
-                <h1 className='spartan tapedeck-title'>
+                <h2 className='spartan tapedeck-title'>
                     Tapedeck
-                </h1>
+                </h2>
                 <div className='tapedeck-box'>
                     <ul>
-                        <li>An online space created to provide music listeners the ability to create and share albums that hold particular significance together.</li>
+                        <li>Created to provide music listeners the ability to create and share albums that hold particular significance together.</li>
                         <br></br>
-                        <li>Built using Rails, users can create, edit and delete Tapedecks, which are compilations of albums which hold significance to them.</li>
+                        <li>Users can create, edit and delete Tapedecks, which are compilations of albums which hold significance to them.</li>
                     </ul>
                 </div>
             </div>

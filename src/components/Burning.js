@@ -48,9 +48,9 @@ const Burning = () => {
             </div>
             <div className={`project-overlay burning-airlines-card`}>
                 <div>
-                    <h1 className='spartan'>
+                    <h2 className='spartan'>
                         Burning Airlines
-                    </h1>
+                    </h2>
                     </div>
                     <div className='card-text-box'>
                         <ul>

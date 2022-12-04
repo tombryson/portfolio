@@ -49,9 +49,9 @@ const Tictactoe = () => {
             </div>
             <div className={`project-overlay tictactoe-card`}>
                 <div>
-                    <h1 className='spartan'>
+                    <h2 className='spartan'>
                     Tic Tac Toe
-                    </h1>
+                    </h2>
                     </div>
                     <div className='card-text-box tictactoe-box'>
                         <ul>
