@@ -39,7 +39,7 @@ h2 {
   background-image: repeating-linear-gradient(45deg, #ffffffa8, transparent 4px);
   display: inline;
   position: relative;
-  right: 6vw;
+  right: 6.4vw;
 }
 
 h1 > .name {
@@ -408,12 +408,6 @@ a.nav-link:hover {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .project-overlay {
-    height: 30vh!important;
-}
-}
-
 @media screen and (max-width: 560px) {
   .project-underlay {
     margin: 37.0vmax 0% 0% 0%;
@@ -467,7 +461,7 @@ a.nav-link:hover {
   background-color: pink;
   color: rgb(0, 0, 0);
   padding: 2%;
-  margin: 12% 8% 8% 8%;
+  margin: 11% 8% 8% 8%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -777,6 +771,10 @@ div.connect-four {
   background: -webkit-linear-gradient(300deg, #61dc00b5, #b4ffbb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ffffff00;
+}
+
+.cf-container {
+  padding: 0 4%;
 }
 
 div.tapedeck {
