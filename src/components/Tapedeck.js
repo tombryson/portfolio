@@ -38,11 +38,6 @@ const Tapedeck = () => {
                     <div className='screen td-screen screenshot-connectfour'>
                         <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot1} alt='Home/Community Page'></img>
                     </div>
-                    <div id="TapedeckModal" className='modal'>
-                        <span class="close">&times;</span>
-                        <img className="modal-content" id="img03" alt="modal content"></img>
-                         <div id="caption-td"></div>
-                    </div>
                     <div className='screen td-screen screenshot-connectfour'>
                         <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot2} alt="Selection: Best Hits of the 80's"></img>
                     </div>
@@ -59,6 +54,11 @@ const Tapedeck = () => {
                         <li>Users can create, edit and delete Tapedecks, which are compilations of albums which hold significance to them.</li>
                     </ul>
                 </div>
+            </div>
+            <div id="TapedeckModal" className='modal'>
+                <span class="close">&times;</span>
+                <img className="modal-content" id="img03" alt="modal content"></img>
+                <div id="caption-td"></div>
             </div>
         </Box>
     );

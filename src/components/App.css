@@ -517,11 +517,9 @@ a.nav-link:hover {
 @keyframes wobble {
   50% {
     border-radius: 72% 90% 52% 72% / 130% 114% 25% 32%;
-    /* --a:160deg; */
   }
   100% {
     border-radius: 72% 94% 62% 82% / 130% 124% 25% 32%;
-    /* --a:169deg; */
   }
 }
 
@@ -1128,4 +1126,8 @@ div.tic-tac-toe {
   align-items: center;
   flex-direction: row;
   margin-top: 1vw;
+}
+
+.svg {
+  z-index: -1;
 }

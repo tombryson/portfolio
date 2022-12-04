@@ -33,11 +33,6 @@ const Burning = () => {
                             alt='Choosing a seat'>
                         </img>
                     </div>
-                    <div id="burningModal" className='modal'>
-                        <span class="close">&times;</span>
-                        <img className="modal-content" id="img01" alt="modal content"></img>
-                         <div id="caption"></div>
-                    </div>
                     <div className='column-1 column screenshot screenshot-burning'>
                         <img className='burning-search' id="myImg" onClick={(e) => modalOnClick(e)} src={BurningairlinesFlights} alt='Searching for a flight'></img>
                     </div>
@@ -59,6 +54,11 @@ const Burning = () => {
                             <li className='fire-dot'>Users can navigate through a pre-seeded list of flights and choose their seats, which are unique to each user and flight.</li>
                         </ul>
                     </div>
+                </div>
+                <div id="burningModal" className='modal'>
+                    <span class="close">&times;</span>
+                    <img className="modal-content" id="img01" alt="modal content"></img>
+                    <div id="caption"></div>
                 </div>
             </Box>
     );
