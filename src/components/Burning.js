@@ -9,15 +9,37 @@ const Burning = () => {
         window.open('https://burning-airlines-177.herokuapp.com/','_blank').focus();
     }
 
+    const modalOnClick = (e) => {
+        let img = e.target
+        const modal = document.getElementById("burningModal");
+        const modalImg = document.getElementById("img01");
+        const captionText = document.getElementById("caption");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+        modal.onclick = () => {
+            modal.style.display = "none";
+        }
+    }
+
     return (
         <Box projectClass={'burning-airlines-card'} project={'Burning Airlines'}>
             <div className='project-underlay'>
                 <div className='img-container'>
                     <div className='column-2 column screenshot screenshot-burning'>
-                        <img className='seat-map-img' src={BurningairlinesSeats} alt='pictures of seats'></img>
+                        <img className='seat-map-img' id="myImg" 
+                            onClick={(e) => modalOnClick(e)} 
+                            src={BurningairlinesSeats} 
+                            alt='Choosing a seat'>
+                        </img>
+                    </div>
+                    <div id="burningModal" className='modal'>
+                        <span class="close">&times;</span>
+                        <img className="modal-content" id="img01" alt="modal content"></img>
+                         <div id="caption"></div>
                     </div>
                     <div className='column-1 column screenshot screenshot-burning'>
-                        <img className='burning-search' src={BurningairlinesFlights} alt='flight log on app'></img>
+                        <img className='burning-search' id="myImg" onClick={(e) => modalOnClick(e)} src={BurningairlinesFlights} alt='Searching for a flight'></img>
                     </div>
                     <div className='column-3 img-logo column'>
                         <img className='burning' onClick={(e) => _handleOnClick(e)} src={Burningairlines} alt='logo of a plane'></img>
@@ -27,7 +49,7 @@ const Burning = () => {
             <div className={`project-overlay burning-airlines-card`}>
                 <div>
                     <h1 className='spartan'>
-                    Burning Airlines
+                        Burning Airlines
                     </h1>
                     </div>
                     <div className='card-text-box'>

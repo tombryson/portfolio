@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-/* @import '~mdb-ui-kit/css/mdb.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400&display=swap');
-/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 
@@ -558,13 +556,11 @@ a.nav-link:hover {
 }
 
 .burning-airlines-card {
-  /* background-color: green; */
   background-image: URL('https://wallpapercave.com/wp/wp4080178.jpg');
 }
 
 div.burning-airlines {
   background-image: linear-gradient(0deg, #6ec2b494, #d3e8f8, #d3e8f8);
-  /* padding-top: clamp(8vw, 225px, 26vh); */
 }
 
 .burning {
@@ -592,11 +588,86 @@ img.burning:hover {
   width: max(70px, 6vw);
 }
 
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 95%;
+  height: 95%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-height: 80vh;
+  width: fit-content!important;
+}
+
+#caption, #caption-c4, #caption-td, #caption-tt {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px){
+  .modal-content {
+    max-width: 95%!important;
+  }
+}
+
+
 .card-text-box, .connect4-box, .tapedeck-box {
   background-color: rgba(255, 255, 255, 0.205);
   height: 72%;
   border-radius: 10px;
-  padding: 0.2rem;
+  padding: 1.1rem;
   margin-top: 2rem;
   font-family: 'League Spartan', sans-serif;
   font-size: clamp(12px, 2.0vmin, 3rem);
@@ -656,14 +727,13 @@ div.connect-four {
   max-width: 600px!important;
   margin: 0 auto;
   padding: 2% 0;
-  transition: 0.04s all cubic-bezier(0.5, -0.2, 0.75, 0.72);
   box-shadow: inset 0px 6px 19px 5px black;
 }
 
 .connect-four-logo:hover {
   background-image: linear-gradient(0deg, rgb(150 201 40 / 0%) 5%, rgb(99 168 49) 4%, transparent 20%), radial-gradient(rgb(0 0 0 / 14%) -20%, #38650d 150%);
   border-radius: 14px;
-  box-shadow: inset 0px 6px 19px 5px black, 2px 1px 10px 0px #8acc4d;
+  box-shadow: inset 0px 6px 16px 8px black, 2px 1px 4px 0px #f4fdb8;
   scale: 0.99;
   background-size: 27px;
   cursor: pointer;
@@ -682,13 +752,6 @@ div.connect-four {
   border-radius: 10%;
   box-shadow: 0px 0px 6px 6px #84a1728f;
   cursor: pointer;
-}
-
-.connectfour-img:hover {
-  scale: 1.9;
-  z-index: 10000;
-  transition: 0.4s;
-  transition-timing-function: cubic-bezier(0.2, 1.15, 0.96, 1.06);
 }
 
 .screenshot-container {
@@ -909,6 +972,8 @@ div.tic-tac-toe {
   animation-fill-mode: both;
   pointer-events: auto;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .text-box svg {
@@ -1006,11 +1071,10 @@ div.tic-tac-toe {
 .black {
   text-align: center;
   border: solid black;
-  padding: 20px;
   width: 46vw;
   font-size: calc(18px + 0.4rem);
   display: flex;
-  padding: 62px;
+  padding: 54px 68px 68px 68px;
   border-radius: 102px;
   align-content: space-between;
   flex-wrap: wrap;
@@ -1019,6 +1083,7 @@ div.tic-tac-toe {
   justify-content: space-evenly;
   filter: drop-shadow(2px 3px 6px black);
   transition: 1s all ease;
+  align-items: baseline;
 }
 
 .black svg {
@@ -1028,7 +1093,8 @@ div.tic-tac-toe {
 
 .black svg:hover {
   cursor: pointer;
-  background: radial-gradient(#3570ffd4 30%, transparent 60%);
+  background: radial-gradient(#74a6d1e0 30%, transparent 67%, transparent 50%);
+  transform: matrix3d(1, 0, 1.1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, -1.5, 1, 1);
 }
 
 .black:hover {

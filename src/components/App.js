@@ -82,6 +82,7 @@ const navbarTheme = () => {
   navbarTheme()
 }, [scrollPosition]);
 
+
   return (
     <>
     <div>
