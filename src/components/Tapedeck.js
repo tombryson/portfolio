@@ -7,7 +7,7 @@ import Screenshot2 from '../images/tapedeck-2.jpg'
 const Tapedeck = () => {
 
     const _handleOnClick = () => {
-        window.open('https://tapedeck-app.herokuapp.com/','_blank').focus();
+        window.open('https://tapedeck.herokuapp.com/','_blank').focus();
     }
 
     const modalOnClick = (e) => {
