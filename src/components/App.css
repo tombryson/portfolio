@@ -803,7 +803,7 @@ div.tapedeck {
 }
 
 .tapedeck-logo {
-  /* width: max(90px, 14vmin)!important; */
+  width: max(90px, 13vmin)!important;
   border-radius: 20%;
   max-width: 200px!important;
   padding: 8px 0px 8px 0px;
@@ -1077,12 +1077,18 @@ div.tic-tac-toe {
 
 @media screen and (max-width: 600px) {
   .stage {
-    padding: 0 30px;
+    padding: 0 10px;
+  }
+  .skill-box {
+    padding: 4px;
   }
   .skills:hover .skill-box:not(:hover) {
     padding: 2px;
-    opacity: 80%;
-    filter: blur(3px);
+    opacity: 85%;
+    filter: blur(1px);
+  }
+  .skill-box:hover {
+    transform: scale(1.2);
   }
 }
 
