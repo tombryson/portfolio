@@ -134,7 +134,9 @@ const navbarTheme = () => {
         <div class="row">
           <div className='text-box box-1'>
             <h1 className='welcome spartan my-skills'>My Skills</h1>
+            <div className='svg'>
               <Pencil />
+            </div>
             <img className="arrow-bot" src={Arrow2} alt="an arrow"></img>
           </div>
         </div>

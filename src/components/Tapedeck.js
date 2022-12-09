@@ -25,7 +25,9 @@ const Tapedeck = () => {
 
     return (
         <Box projectClass={'tapedeck-card'} project={'Tapedeck'}>
-            <img className='tape' src={Tape} alt='an analogue tape'></img>
+            <div className='tape-container'>
+                <img className='tape' src={Tape} alt='an analogue tape'></img>
+            </div>
             <div className='project-underlay see-through'>
                 <div className='td-container'>
                     <div className='screen td-screen screenshot-connectfour row'>
@@ -36,27 +38,27 @@ const Tapedeck = () => {
                     <div className='screen td-screen screenshot-connectfour'>
                         <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot1} alt='Home/Community Page'></img>
                     </div>
-                    <div id="TapedeckModal" className='modal'>
-                        <span class="close">&times;</span>
-                        <img className="modal-content" id="img03" alt="modal content"></img>
-                         <div id="caption-td"></div>
-                    </div>
                     <div className='screen td-screen screenshot-connectfour'>
                         <img className='connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Screenshot2} alt="Selection: Best Hits of the 80's"></img>
                     </div>
                 </div>
             </div>
             <div className='project-overlay tapedeck-card'>
-                <h1 className='spartan tapedeck-title'>
+                <h2 className='spartan tapedeck-title'>
                     Tapedeck
-                </h1>
+                </h2>
                 <div className='tapedeck-box'>
                     <ul>
-                        <li>An online space created to provide music listeners the ability to create and share albums that hold particular significance together.</li>
+                        <li>Created to provide music listeners the ability to create and share albums that hold particular significance together.</li>
                         <br></br>
-                        <li>Built using Rails, users can create, edit and delete Tapedecks, which are compilations of albums which hold significance to them.</li>
+                        <li>Users can create, edit and delete Tapedecks, which are compilations of albums which hold significance to them.</li>
                     </ul>
                 </div>
+            </div>
+            <div id="TapedeckModal" className='modal'>
+                <span class="close">&times;</span>
+                <img className="modal-content" id="img03" alt="modal content"></img>
+                <div id="caption-td"></div>
             </div>
         </Box>
     );

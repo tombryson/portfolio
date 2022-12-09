@@ -30,11 +30,6 @@ const Connect4 = () => {
                     <div className='row-1 row'>
                         <img className='connect-four-logo' onClick={() => _handleOnClick()} src={Connect4title} alt='Shrenekt Four Logo'></img>
                     </div>
-                    <div id="modal" className='modal'>
-                        <span class="close">&times;</span>
-                        <img className="modal-content" id="img02" alt="modal content"></img>
-                         <div id="caption-c4"></div>
-                    </div>
                     <div className='screenshot-container'>
                         <div className='screen cf-column screenshot-connectfour'>
                             <img className='connectfour-img' id="myImg" src={Screenshot1} onClick={(e) => modalOnClick(e)} alt='Shrenekt Four for Mobile'></img>
@@ -47,9 +42,9 @@ const Connect4 = () => {
             </div>
             <div className={`project-overlay connect-four-card`}>
                 <div>
-                    <h1 className='spartan shrek-title'>
+                    <h2 className='spartan shrek-title'>
                     Connect Four
-                    </h1>
+                    </h2>
                     </div>
                     <div className='connect4-box'>
                         <ul>
@@ -58,6 +53,11 @@ const Connect4 = () => {
                             <li>Built using reactJS, users can choose one of several in-game characters and play as them in a strategic game of Connect Four. </li>
                         </ul>
                     </div>
+                </div>
+                <div id="modal" className='modal'>
+                    <span class="close">&times;</span>
+                    <img className="modal-content" id="img02" alt="modal content"></img>
+                    <div id="caption-c4"></div>
                 </div>
         </Box>
     );

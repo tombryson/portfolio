@@ -11,12 +11,14 @@
 body {
   background-color: #f9fcff!important;
   --angle: 145deg;
-  overflow: hidden;
-  overflow-y: scroll;
 }
 
 h1.spartan {
   margin-bottom: 5%;
+}
+
+h2 {
+  font-family: "leaguespartan-bold", "leaguespartan-bold", serif;
 }
 
 .top-background {
@@ -33,17 +35,16 @@ h1.spartan {
 
 .name {
   opacity: 0;
-  transition: all 0.6s ease!important;
   border: solid black;
   background-image: repeating-linear-gradient(45deg, #ffffffa8, transparent 4px);
   display: inline;
+  position: relative;
+  right: 6.4vw;
 }
 
 h1 > .name {
   animation: fadeIn 4s;
   animation-fill-mode: forwards;
-  right: 6vw;
-  position: relative;
 }
 
 @keyframes fadeIn {
@@ -123,7 +124,7 @@ h1 > .name {
   display: flex;
   align-items: center;
   transition: all 0.6s ease!important;
-  -moz-transition: all 1s;
+  -moz-transition: all 1.2s;
 }
 
 .hello {
@@ -166,12 +167,20 @@ h1 > .name {
 }
 
 .content-top #top {
-  font-size: 40px;
+  font-size: 38px;
   text-align: center;
   margin: 0 auto;
   text-transform: uppercase;
   width: 13%;
-  transition: all 1.2s cubic-bezier(0.25, 0.17, 0.3, 0.73);
+  font-size: 38px;
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  width: 13%;
+  transition: all 1.2s cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition: all 1s;
+  background-image: #ffffff00;
+  border-radius: 50px;
   -moz-transition: all 1s;
   background-image: #ffffff00;
   border-radius: 50px;
@@ -179,7 +188,7 @@ h1 > .name {
 
 #top {
   background-color: rgb(255 255 255 / 20%);
-  box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #00ffbd, inset -20px 0 80px #9200ff, inset 20px 0 300px #aed5ff, inset -20px 0 300px #ffffffe3, 0 0 50px #ffffffde, -9px 2px 80px #ffffffba, 10px 0 80px #0087ffb0;
+  box-shadow: inset 20px 0 80px #00ffd3, inset -20px 0 80px #9200ff, inset 20px 0 300px #aed5ff, inset -20px 0 300px #ffffffe3, 0 0 20px #ffffffde, 0px 0px 20px #0087ffb0;
   padding: 2em 4em 4% 9%;
   border: #000000d1 2px solid;
   color: black;
@@ -189,11 +198,11 @@ h1 > .name {
 }
 
 h1#top:hover {
-  box-shadow: inset 0 0 12rem 12rem black;
-  background-color: transparent;
+  background-color: black;
+  box-shadow: none;
   color: aliceblue;
   border: white 2px solid;
-  border-radius: 25% 25% 25% 25% / 25% 25% 25% 25%;
+  border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
 }
 
 h1#top:hover div {
@@ -363,6 +372,7 @@ a.nav-link:hover {
   position: absolute;
   box-shadow: 3px 4px 12px 5px #303030c7;
   min-height: 340px;
+  z-index: 1;
 }
 
 .see-through {
@@ -404,22 +414,13 @@ a.nav-link:hover {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .project-overlay {
-    height: 30vh!important;
-}
-.card-text-box, .connect4-box {
-  font-size: 14px!important;
-}
-}
-
 @media screen and (max-width: 560px) {
   .project-underlay {
     margin: 37.0vmax 0% 0% 0%;
     height: 36vh;
   }
   .project-overlay {
-    height: 30vh!important;
+    height: 32vh!important;
   }
   h1 .spartan {
     font-size: smaller;
@@ -440,7 +441,7 @@ a.nav-link:hover {
     height: 36vh;
   }
   .project-overlay {
-    height: 30vh!important;
+    height: 32vh!important;
   }
   h1 .spartan {
     font-size: smaller;
@@ -466,7 +467,7 @@ a.nav-link:hover {
   background-color: pink;
   color: rgb(0, 0, 0);
   padding: 2%;
-  margin: 12% 8% 8% 8%;
+  margin: 11% 8% 8% 8%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -516,11 +517,9 @@ a.nav-link:hover {
 @keyframes wobble {
   50% {
     border-radius: 72% 90% 52% 72% / 130% 114% 25% 32%;
-    /* --a:160deg; */
   }
   100% {
     border-radius: 72% 94% 62% 82% / 130% 124% 25% 32%;
-    /* --a:169deg; */
   }
 }
 
@@ -666,7 +665,7 @@ img.burning:hover {
   background-color: rgba(255, 255, 255, 0.205);
   height: 72%;
   border-radius: 10px;
-  padding: 1.1rem;
+  padding: 5px;
   margin-top: 2rem;
   font-family: 'League Spartan', sans-serif;
   font-size: clamp(12px, 2.0vmin, 3rem);
@@ -769,11 +768,19 @@ div.connect-four {
   background-color: #2bf32d;
 }
 
+.tape-container {
+  overflow: hidden;
+}
+
 .shrek-title {
   color: #75e014;
   background: -webkit-linear-gradient(300deg, #61dc00b5, #b4ffbb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ffffff00;
+}
+
+.cf-container {
+  padding: 0 4%;
 }
 
 div.tapedeck {
@@ -817,9 +824,10 @@ div.tapedeck {
 .tape {
   position: absolute;
   opacity: 20%;
-  width: 60vmax;
-  right: 0rem;
+  width: 54vmax;
+  right: 8%;
   animation: rotate-gradient linear 10s infinite;
+  margin-top: -4%;
 }
 
 @keyframes rotate-gradient {
@@ -852,7 +860,7 @@ div.tic-tac-toe {
   display: inline-block;
   font-family: 'Grandstander', cursive;
   cursor: pointer;
-  font-size: clamp(28px, 9vmin, 60px);
+  font-size: clamp(28px, 8vmin, 60px);
   padding: 1vw;
 }
 
@@ -907,7 +915,6 @@ div.tic-tac-toe {
 .no-padding {
   padding: 0px;
   background-image: conic-gradient(from 0deg at 50% 40%, #ffffff 25%, transparent 38%, #76a8d1, black 105%);
-  transform: scaleX(1.2);
   background-size: 132% 100%;
 }
 
@@ -925,14 +932,13 @@ div.tic-tac-toe {
   pointer-events: none;
   background-position: top;
   box-shadow: inset 7px 12px 20px 8px #000000de;
-  transform: scaleX(0.8);
   height: 300px;
   max-height: 18vh;
   width: 50vw;
   margin: 0 auto;
-  min-width: 520px;
+  min-width: 100%;
   flex-wrap: nowrap;
-  padding: 0 60px;
+  padding: 0 8%;
 }
 
 .no-padding svg {
@@ -946,9 +952,10 @@ div.tic-tac-toe {
   border: solid #2d2b28 0px;
   transform: translateY(4.2vh);
   max-width: 45%;
-  filter: blur(1px);
+  filter: blur(0.5px);
   transition: 0.4s all ease-in-out;
   font-family: 'Yellowtail', cursive;
+  transform: scale(1.3);
 }
 
 .my-skills:hover {
@@ -963,6 +970,7 @@ div.tic-tac-toe {
   filter: contrast(0.8) blur(1px);
   width: 60%;
   height: 78%;
+  transform: scale(1.1);
 }
 
 .skill-box {
@@ -1133,4 +1141,8 @@ div.tic-tac-toe {
   align-items: center;
   flex-direction: row;
   margin-top: 1vw;
+}
+
+.svg {
+  z-index: -1;
 }

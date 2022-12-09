@@ -33,11 +33,6 @@ const Tictactoe = () => {
                         <div className='column-ttt port-ttt'>
                             <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe3} alt='Winning Screen'></img>
                         </div>
-                        <div id="TicTacModal" className='modal'>
-                            <span class="close">&times;</span>
-                            <img className="modal-content" id="img04" alt="modal content"></img>
-                                <div id="caption-tt"></div>
-                        </div>
                         <div className='column-ttt port-ttt'>
                             <img className='ttt-screen connectfour-img' id="myImg" onClick={(e) => modalOnClick(e)} src={Tictactoe1} alt='TicTacToe Mobile'></img>
                         </div>
@@ -49,9 +44,9 @@ const Tictactoe = () => {
             </div>
             <div className={`project-overlay tictactoe-card`}>
                 <div>
-                    <h1 className='spartan'>
+                    <h2 className='spartan'>
                     Tic Tac Toe
-                    </h1>
+                    </h2>
                     </div>
                     <div className='card-text-box tictactoe-box'>
                         <ul>
@@ -60,6 +55,11 @@ const Tictactoe = () => {
                             <li>Users can reset the board and their scores and on winning, players are rewarded with confetti.</li>
                         </ul>
                     </div>
+                </div>
+                <div id="TicTacModal" className='modal'>
+                    <span class="close">&times;</span>
+                    <img className="modal-content" id="img04" alt="modal content"></img>
+                    <div id="caption-tt"></div>
                 </div>
             </Box>
     );
