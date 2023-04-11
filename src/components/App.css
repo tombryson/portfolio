@@ -233,7 +233,7 @@ a.navbar-brand {
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255, 80%);
   transition: color 0.6s ease!important;
 }
 
@@ -288,7 +288,7 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 }
 
 a.nav-link:hover {
-  color: #597cd6!important;
+  color: #6687a7!important;
   transition: 0.1s all!important;
 }
 
@@ -317,6 +317,12 @@ a.nav-link:hover {
   text-align: left;
   display: inline-block;
   margin-left: 0vw;
+}
+
+.tom {
+  display: inline-block;
+  white-space: nowrap;
+  font-style: italic;
 }
 
 .text-box {
@@ -759,7 +765,7 @@ div.connect-four {
 }
 
 .tapedeck-card {
-  background-image: linear-gradient(38deg, #09f209 70%, #43ff00fa 75%);
+  background-color: #2bf32d;
 }
 
 .tape-container {
@@ -778,7 +784,7 @@ div.connect-four {
 }
 
 div.tapedeck {
-  background-image: linear-gradient(0deg, #31d131a9, #00ff00, #488a42ab);
+  background-image: linear-gradient(0deg, #43aa71, #4dee37, #488a42ab);
 }
 
 .td-container {
@@ -797,7 +803,7 @@ div.tapedeck {
 }
 
 .tapedeck-logo {
-  width: max(90px, 14vmin)!important;
+  width: max(90px, 13vmin)!important;
   border-radius: 20%;
   max-width: 200px!important;
   padding: 8px 0px 8px 0px;
@@ -844,7 +850,7 @@ div.tapedeck {
 }
 
 div.tic-tac-toe {
-  background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #76a8d1ad, #31d131a9);
+  background-image: linear-gradient(0deg, #76a8d1, #76a8d1ad, #76a8d1ad, #43aa71);
 }
 
 .tictactoe-title{
@@ -1067,6 +1073,23 @@ div.tic-tac-toe {
   display: block;
   font-style: italic;
   font-family: 'League Spartan';
+}
+
+@media screen and (max-width: 600px) {
+  .stage {
+    padding: 0 10px;
+  }
+  .skill-box {
+    padding: 4px;
+  }
+  .skills:hover .skill-box:not(:hover) {
+    padding: 2px;
+    opacity: 85%;
+    filter: blur(1px);
+  }
+  .skill-box:hover {
+    transform: scale(1.2);
+  }
 }
 
 .black {
