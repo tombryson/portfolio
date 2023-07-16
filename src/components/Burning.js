@@ -6,7 +6,7 @@ import BurningairlinesFlights from '../images/burning-airlines-flights.png';
 const Burning = () => {
     const _handleOnClick = (e) => {
         e.preventDefault();
-        window.open('https://burning-airlines-177.herokuapp.com/','_blank').focus();
+        window.open('https://burning-airlines-client.fly.dev/','_blank').focus();
     }
 
     const modalOnClick = (e) => {
