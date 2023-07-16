@@ -7,7 +7,7 @@ import Screenshot2 from '../images/tapedeck-2.jpg'
 const Tapedeck = () => {
 
     const _handleOnClick = () => {
-        window.open('https://burning-airlines-client.fly.dev/','_blank').focus();
+        window.open('https://tapedeck.fly.dev/','_blank').focus();
     }
 
     const modalOnClick = (e) => {
