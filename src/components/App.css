@@ -167,42 +167,21 @@ h1 > .name {
 }
 
 .content-top #top {
-  font-size: 38px;
-  text-align: center;
   margin: 0 auto;
-  text-transform: uppercase;
   width: 13%;
-  font-size: 38px;
-  text-align: center;
-  margin: 0 auto;
-  text-transform: uppercase;
-  width: 13%;
-  transition: all 1.2s cubic-bezier(0, 0, 0.2, 1);
+  transition: all 1.0s ease-in-out;
   -moz-transition: all 1s;
-  background-image: #ffffff00;
-  border-radius: 50px;
-  -moz-transition: all 1s;
-  background-image: #ffffff00;
-  border-radius: 50px;
 }
 
 #top {
-  background-color: rgb(255 255 255 / 20%);
-  box-shadow: inset 20px 0 80px #00ffd3, inset -20px 0 80px #9200ff, inset 20px 0 300px #aed5ff, inset -20px 0 300px #ffffffe3, 0 0 20px #ffffffde, 0px 0px 20px #0087ffb0;
-  padding: 2em 4em 4% 9%;
-  border: #000000d1 2px solid;
-  color: black;
-  border-style: dashed;
   margin-bottom: 10vh!important;
   width: 13%;
 }
 
 h1#top:hover {
-  background-color: black;
-  box-shadow: none;
-  color: aliceblue;
-  border: white 2px solid;
-  border-radius: 20% 20% 20% 20% / 20% 20% 20% 20%;
+  background-color: #060d18d1;
+  text-decoration: underline;
+  color: #e7edf3f2;
 }
 
 h1#top:hover div {
